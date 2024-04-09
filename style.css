@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    place-items: center;
+}
+
+/* Borders */
+/* .header,.college-logo,.college-name,.other-logo,.hero-section,.dept-name,.tag-line,.dept-img{
+    border: 2px solid black;
+} */
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1280px;
+    height: 150px;
+    max-width: 1440px;
+}
+
+.college-logo{
+    height: 148px;
+    width: 270px;
+    background-image: url(images/college/mmmut-new-logo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.college-name{
+    width: 740px;
+    height: 148;
+    display: grid;
+    place-items: center;
+    /* display: inline */
+}
+
+.other-logo{
+    height: 148px;
+    width: 270px;
+}
+
+.coll-name{
+    font-size: 22px;
+    line-height: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.coll-name-hindi{
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.coll-stb{
+    display: inline;
+    font-size: 15px;
+    line-height: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: #7B7B7B;
+    padding-top: 3px;
+}
+
+/* Navigation Bar */
+
+.nav-bar{
+    width: 1280px;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 980px;
+    font-size: 18px;
+    line-height: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ol{
+    text-decoration: none;
+}
+
+/* Hero Section */
+
+.hero-section{
+    width: 1180px;
+    height: 755px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dept-name{
+    width: 1075px;
+    height: 150px;
+    font-size: 72px;
+    list-style: 60px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.tag-line{
+    width: 510px;
+    height: 58px;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.dept-img{
+    width: 1024px;
+    height: 391px;
+    border-radius: 100px;
+    background-image: url(images/college/IITR_JT-removebg-preview.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.explore-btn{
+    width: 164px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    line-height: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 10px;
+}
+
+
+
