@@ -27,35 +27,95 @@
 <body>
     <!-- Header -->
     <div class="header">
-        <div class="college-logo"></div>
-        <div class="college-name">
-            <p class="coll-name">Madan Mohan Malaviya University Of Technology, Gorakhpur (India)</p>
-            <p class="coll-name-hindi">मदन मोहन मालवीय प्रौद्योगिकी विश्वविद्यालय, गोरखपुर (यूपी) भारत</p>
-            <p class="coll-stb">Established by U.P. Act No. 22 of 2013 of U.P. Government</p>
-            <p class="coll-stb">(Formerly Madan Mohan Malaviya Engineering College)</p>
+        <div class="college-logo-iiche"></div>
+        <div class="college-name-iiche">
+            <p class="coll-name-iiche">Madan Mohan Malaviya University Of Technology, Gorakhpur (India)</p>
+            <p class="coll-name-hindi-iiche">मदन मोहन मालवीय प्रौद्योगिकी विश्वविद्यालय, गोरखपुर (यूपी) भारत</p>
+            <p class="coll-stb-iiche">Established by U.P. Act No. 22 of 2013 of U.P. Government</p>
+            <p class="coll-stb-iiche">(Formerly Madan Mohan Malaviya Engineering College)</p>
         </div>
-        <div class="other-logo"></div>
+        <div class="other-logo-iiche"></div>
     </div>
     <!-- Navigation bar -->
     <div class="nav-bar">
         <ul>
             <ol><a id="nav-a" href="index.html">Home</a></ol>
-            <ol> <a id="nav-a" href="#">Faculty</a></ol>
-            <ol> <a id="nav-a" href="#">IIChE</a></ol>
+            <ol> <a id="nav-a" href="Faculty.html">Faculty</a></ol>
+            <ol> <a id="nav-a" href="iiche.html">IIChE</a></ol>
             <ol><a id="nav-a" href="labs.html">Labs</a></a></ol>
-            <ol><a id="nav-a" href="#">Activities</a></ol>
-            <ol> <a id="nav-a" href="#">Placements</a></ol>
+            <ol><a id="nav-a" href="#" onclick="alert('Available Soon')" >Activities</a></ol>
+            <ol> <a id="nav-a" href="#" onclick="alert('Available Soon')" >Placements</a></ol>
             <ol id="z">Projects</ol>
             <ol id="z">Contacts</ol>
         </ul>
     </div>
     <!-- Hero Section -->
-    <div class="hero-section">
+    <div class="hero-section-iiche">
         <div class="iiche-name">IIChE <span id="span-iiche">STUDENT<br>CHAPTER
         </span> MMMUT</div>
         <!-- <div class="tag-line">Solve Global Challenges. Start Your Chemical Engineering Journey Here.</div> -->
-        <div class="iiche-img"></div>
-        <div class="explore-btn">Explore</div>
+        <div class="iiche-img">
+            <section>
+                <div class="icont2">
+                    <div class="slider">
+                        <div class="list">
+                            <div class="item">
+                                <!-- <img src="img/1.jpg" alt=""> -->
+                                <img id="iiche-img-big" src="images/iiche/e22.jpg" alt="">
+                                <img id="iiche-img-small" src="IIChe-Images-for-slider/om1.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <!-- <img src="img/2.jpg" alt=""> -->
+                                <img id="iiche-img-big" src="images/iiche/p1.jpg" alt="">
+                                <img id="iiche-img-small" src="IIChe-Images-for-slider/om2.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <!-- <img src="img/3.jpg" alt=""> -->
+                                <img id="iiche-img-big" src="images/iiche/s4.jpg" alt="">
+                                <img id="iiche-img-small" src="IIChe-Images-for-slider/ex.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img id="iiche-img-big" src="images/iiche/s5.jpg" alt="">
+                                <img id="iiche-img-small" src="IIChe-Images-for-slider/om3.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img id="iiche-img-big" src="images/iiche/s8.jpg" alt="">
+                                <img id="iiche-img-small" src="IIChe-Images-for-slider/p1.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img id="iiche-img-big" src="images/iiche/s7.jpg" alt="">
+                                <img id="iiche-img-small" src="IIChe-Images-for-slider/p1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button id="prev"><</button>
+                                    <button id="next">></button>
+                        </div>
+                        <ul class="dots">
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+        
+                    <script src="script.js"></script>
+                </div>
+        
+                <!-- Dots Navigation -->
+                <div class="absolute bottom-0 left-0 right-0 flex justify-center space-x-2 p-4">
+                    <template x-for="slideIndex in slideCount" :key="slideIndex">
+                        <button @click="activeSlide = slideIndex" class="h-2 w-2 rounded-full"
+                            :class="{'bg-orange-500': activeSlide === slideIndex, 'bg-white/50': activeSlide !== slideIndex}"></button>
+                    </template>
+                </div>
+                </div>
+                </div>
+                </div>
+            </section>
+        </div>
+        <!-- <div class="explore-btn">Explore</div> -->
     </div>
     <!-- About Section -->
     <div class="iiche-coll">
@@ -87,39 +147,39 @@
 
      <!-- Gate Score -->
 
-     <div class="gate-coll">
-         <div class="gate-coll-photo"></div>
-        <div class="gate-coll-text">
-            <p class="gate-head"><strong>Expert Talk</strong></p>
-            <p class="gate-text">"Expert Talk" in the Chemical Engineering Department, MMMUT!  the seminar series brings in leading professionals from the industry to share their real-world expertise and insights with our students and faculty.  These talks aim to bridge the gap between academic theory and practical applications, preparing students for successful careers in the chemical engineering field.</p>
-            <p class="explore-gate">Explore</p>
+     <div class="gate-coll-iiche">
+         <div class="gate-coll-photo-iiche-1"></div>
+        <div class="gate-coll-text-iiche">
+            <p class="gate-head-iiche"><strong>Expert Talk</strong></p>
+            <p class="gate-text-iiche">"Expert Talk" in the Chemical Engineering Department, MMMUT!  the seminar series brings in leading professionals from the industry to share their real-world expertise and insights with our students and faculty.  These talks aim to bridge the gap between academic theory and practical applications, preparing students for successful careers in the chemical engineering field.</p>
+            <!-- <p class="explore-gate">Explore</p> -->
         </div>
     </div>
      <!-- Gate Score -->
 
-     <div class="gate-coll">
-         <div class="gate-coll-photo"></div>
-        <div class="gate-coll-text">
-            <p class="gate-head"><strong>Mind De Dazzle:</strong> </p>
-            <p class="gate-text">Unleash your inner genius at "Mind De Dazzle," an electrifying event designed to challenge and invigorate your mind. This exciting program will showcase a variety of activities and presentations that will push your problem-solving skills, ignite your creativity, and leave you thoroughly entertained. Don't miss this opportunity to be Dazzled!</p>
-            <p class="explore-gate">Explore</p>
+     <div class="gate-coll-iiche">
+         <div class="gate-coll-photo-iiche-2"></div>
+        <div class="gate-coll-text-iiche">
+            <p class="gate-head-iiche"><strong>Mind De Dazzle:</strong> </p>
+            <p class="gate-text-iiche">Unleash your inner genius at "Mind De Dazzle," an electrifying event designed to challenge and invigorate your mind. This exciting program will showcase a variety of activities and presentations that will push your problem-solving skills, ignite your creativity, and leave you thoroughly entertained. Don't miss this opportunity to be Dazzled!</p>
+            <!-- <p class="explore-gate">Explore</p> -->
         </div>
     </div>
     <!-- Gate Score -->
 
-    <div class="gate-coll">
-        <div class="gate-coll-photo"></div>
-        <div class="gate-coll-text">
-            <p class="gate-head"><strong>Chemisch’Graphy</strong> </p>
-            <p class="gate-text">Unleash your inner scientist and photographer at "Chemisch'Graphy," a unique event exploring the intersection of chemistry and photography! This exciting program offers a fun and educational experience for photographers of all skill levels.</p>
-            <p class="explore-gate">Explore</p>
+    <div class="gate-coll-iiche">
+        <div class="gate-coll-photo-iiche-3"></div>
+        <div class="gate-coll-text-iiche">
+            <p class="gate-head-iiche"><strong>Chemisch’Graphy</strong> </p>
+            <p class="gate-text-iiche">Unleash your inner scientist and photographer at "Chemisch'Graphy," a unique event exploring the intersection of chemistry and photography! This exciting program offers a fun and educational experience for photographers of all skill levels.</p>
+            <!-- <p class="explore-gate">Explore</p> -->
         </div>
     </div>
 
     <!-- Publications -->
 
     <div class="center-heading">
-        <p>Publications</p>
+        <p>Activities</p>
     </div>
 
     <div class="publicn">
@@ -155,27 +215,27 @@
     <!-- Research Projects -->
 
     <div class="center-heading">
-        <p>Research Project</p>
+        <p>Spotlights</p>
     </div>
 
-    <div class="reseach-pr">
+    <div class="iiche-pr">
         <div class="reseach-pr-cont">
             <p class="reseach-pr-about">Spotlights</p>
-            <p class="reseach-pr-text">These events are like spotlights, shining on students' talents and helping them turn their ideas into reality. The IIChE student chapter is all about making you the future leader in engineering - one awesome event at a time!</p>
+            <p class="reseach-pr-text" id="reseach-pr-text-iiche">These events are like spotlights, shining on students' talents and helping them turn their ideas into reality. The IIChE student chapter is all about making you the future leader in engineering - one awesome event at a time!</p>
             <p class="reseach-pr-exp">Learn More</p>
         </div>
-        <div class="reseach-pr-img">
-            <div class="reseach-pr-s"></div>
-            <div class="reseach-pr-s"></div>
-            <div class="reseach-pr-s"></div>
-            <div class="reseach-pr-s"></div>
+        <div class="reseach-pr-img-iiche">
+            <div class="reseach-pr-s1-iiche"></div>
+            <div class="reseach-pr-s2-iiche"></div>
+            <div class="reseach-pr-s3-iiche"></div>
+            <div class="reseach-pr-s4-iiche"></div>
         </div>
     </div>
 
     <!-- Message from HOD -->
 
-    <div class="msg-hod">
-        <p class="msg-head">Message From HOD</p>
+    <div class="msg-hod" id="msg-hod-iiche">
+        <p class="msg-head">Message </p>
         <p class="msg-text"> " On the behalf of Department of Chemical Engineering, Madan Mohan Malaviya University of
             Technology, Gorakhpur, Uttar Pradesh, I welcome to visitor. Department was established in year 2016 and
             approved by All India Council for Technical Education, New Delhi. Department of Chemical Engineering is
@@ -217,36 +277,36 @@
         <div class="foot-nav">
             <div class="foot-nav-s">
                 <p class="foot-about">About</p>
-                <p class="foot-about-n">Home</p>
-                <p class="foot-about-n">Faculty</p>
-                <p class="foot-about-n">Labs</p>
-                <p class="foot-about-n">Projects</p>
-                <p class="foot-about-n">IIChE</p>
+                <a class="foot-about-n" href="index.html">Home</a>
+                <a class="foot-about-n" href="Faculty.html">Faculty</a>
+                <a class="foot-about-n" href="iiche.html">IIChE</a>
+                <a class="foot-about-n" href="labs.html">Labs</a>
+                <a class="foot-about-n" href="">Projects</a>
             </div>
             <div class="foot-nav-s">
                 <p class="foot-about">Official Links</p>
-                <p class="foot-about-n">MMMUT Official Website</p>
-                <p class="foot-about-n">MMMUT Official ChED Website</p>
-                <p class="foot-about-n">Programmes</p>
-                <p class="foot-about-n">Research Gate</p>
-                <p class="foot-about-n">Name</p>
+                <a class="foot-about-n" href="http://www.mmmut.ac.in/" target="_blank">MMMUT Official Website</a>
+                <a class="foot-about-n" href="http://www.mmmut.ac.in/ChemicalHome" target="_blank">MMMUT Official ChED Website</a>
+                <a class="foot-about-n" href="iiche.html">Programmes</a>
+                <a class="foot-about-n" href="labs.html">Research Gate</a>
+                <a class="foot-about-n" href="">Name</a>
             </div>
             <div class="foot-nav-s">
                 <p class="foot-about">Others</p>
-                <p class="foot-about-n">Studenst</p>
-                <p class="foot-about-n">Activities</p>
-                <p class="foot-about-n">Name</p>
-                <p class="foot-about-n">Suggestions</p>
-                <p class="foot-about-n">Contacts</p>
+                <a class="foot-about-n" href="index.html">Studenst</a>
+                <a class="foot-about-n" href="Faculty.html">Activities</a>
+                <a class="foot-about-n" href="iiche.html">Name</a>
+                <a class="foot-about-n" href="labs.html">Suggestions</a>
+                <a class="foot-about-n" href="">Contacts</a>
             </div>
         </div>
         <div class="foot-social-h">
             <p>Follow us</p>
         </div>
         <div class="foot-social-c">
-            <p class="foot-social-i">Instagram</p>
-            <p class="foot-social-i">Facebook</p>
-            <p class="foot-social-i">LinkedIn</p>
+            <a class="foot-social-i" onclick="alert('Available soon...')" href="">Instagram</a>
+            <a class="foot-social-i" onclick="alert('Available soon...')" href="">Facebook</a>
+            <a class="foot-social-i" onclick="alert('Available soon...')" href="">LinkedIn</a>
         </div>
         <div class="developer">
             <p>All Right Reserved</p>
