@@ -19,10 +19,11 @@ body {
 
 /* Variables */
 
-/* :root {
-    --border: 2px solid black;
+:root {
+    --border: 1.3px solid #D9D9D9;
     --dl: inline;
-} */
+    --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 /* Borders */
 /* .header,
@@ -46,9 +47,9 @@ body {
 
 .center-heading {
     width: 90vw;
-    max-width: 1080px;
+    max-width: 1180px;
     height: 80px;
-    border: var(--border);
+    /* border: var(--border); */
     margin: 4% 0 2% 0;
     display: grid;
     place-items: center;
@@ -65,11 +66,10 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* width: 1280px; */
     width: 100vw;
     height: 150px;
-    max-width: 1280px;
-    /* max-width: 1440px; */
+    max-width: 1440px;
+    background-color: 2px solid black;
 }
 
 .college-logo {
@@ -86,7 +86,7 @@ body {
     height: 148px;
     display: grid;
     place-items: center;
-    /* display: inline */
+    padding-top: .8%;
 }
 
 .other-logo {
@@ -107,7 +107,7 @@ body {
     line-height: 30px;
     font-weight: bold;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-top: 2px;
+    padding-top: 2px;
 }
 
 .coll-stb {
@@ -124,7 +124,7 @@ body {
 /* Navigation Bar */
 
 .nav-bar {
-    max-width: 1280px;
+    max-width: 1440px;
     width: 100vw;
     height: 50px;
     background-color: black;
@@ -132,7 +132,13 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
+
+
 
 ul {
     display: flex;
@@ -140,16 +146,25 @@ ul {
     justify-content: space-between;
     align-items: center;
     color: white;
-    max-width: 980px;
     width: 80%;
-    font-size: 1.13rem;
-    line-height: 15px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 ol {
     text-decoration: none;
+    font-size: 18px;
+    font-family: "Red Hat Display", sans-serif;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
 }
+
+#nav-a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
 
 /* Hero Section */
 
@@ -157,9 +172,9 @@ ol {
     max-width: 1180px;
     width: 100vw;
     height: 755px;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: center;
 }
 
@@ -168,12 +183,14 @@ ol {
     width: 100%;
     height: 150px;
     font-size: 82px;
+    /* font-size: 500%; */
     line-height: 74%;
     font-family: "Lalezar", system-ui;
     font-weight: 600;
     margin-top: 20px;
     text-transform: uppercase;
-    display: grid;text-align: center;
+    display: grid;
+    text-align: center;
     padding-top: 2%;
 }
 
@@ -181,9 +198,8 @@ ol {
     width: 510px;
     height: 58px;
     font-size: 16px;
-    font-family:"Red Hat Display", sans-serif;
+    font-family: "Red Hat Display", sans-serif;
     text-align: center;
-    /* margin-top: 10px; */
 }
 
 .dept-img {
@@ -196,6 +212,7 @@ ol {
     background-size: contain;
     background-repeat: no-repeat;
     margin-top: 25px;
+    border: var(--border);
 
 }
 
@@ -208,9 +225,8 @@ ol {
     place-items: center;
     font-size: 22px;
     line-height: 30px;
-    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     border-radius: 10px;
-    font-family:"Red Hat Display", sans-serif;
+    font-family: "Red Hat Display", sans-serif;
     margin-top: 4%;
 }
 
@@ -224,44 +240,56 @@ ol {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-top: 5%;
 }
 
 .about-coll-photo {
     width: 40%;
     height: 400px;
     border-radius: 20px;
-    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+    background-image: url(images/college/Untitledaa-1.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    border: var(--border);
+    cursor: pointer;
+}
+
+.about-coll-photo:hover {
+    box-shadow: var(--box-shadow);
 }
 
 .about-coll-text {
-    /* width: 530px; */
     width: 45%;
     height: 400px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
     align-items: left;
     padding-left: 4%;
+    border: var(--border);
+    background-color: #BCEBCB;
+    /* transition: background-color 1.2s; */
+    cursor: pointer;
 }
+
+.about-coll-text:hover {
+    background-color: #82e7a2;
+    box-shadow: var(--box-shadow);
+}
+
 
 .about {
     font-size: 35px;
-    /* font-family: Arial, Helvetica, sans-serif; */
     font-family: "Lalezar", system-ui;
     font-weight: 900;
     padding-top: 10%;
     display: inline;
-    /* padding-right: 20%; */
 }
 
 .about-text {
-    font-size: 16px;
-    /* font-family: Arial, Helvetica, sans-serif; */
-    font-family:"Red Hat Display", sans-serif;
+    font-size: 17px;
+    font-family: "Red Hat Display", sans-serif;
     text-align: justify;
     padding-right: 15%;
     padding-top: 20px;
@@ -276,31 +304,36 @@ ol {
     display: grid;
     place-items: center;
     border-radius: 10px;
-    font-family:"Red Hat Display", sans-serif;
+    font-family: "Red Hat Display", sans-serif;
     cursor: pointer;
 }
 
 /* Vision and Mission */
 
 .vm {
-    /* width: 530px; */
     width: 80%;
-    max-width: 1080px;
+    max-width: 1180px;
     height: 450px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
     align-items: center;
     padding-left: 4%;
-    margin-top: 6%;
+    margin-top: 4%;
+    border: var(--border);
+    background-color: #FDE8E9;
+    cursor: pointer;
+}
+
+.vm:hover {
+    background-color: #feb1b4;
+    box-shadow: var(--box-shadow);
 }
 
 
 .vm-text {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    /* text-align: justify; */
     text-align: center;
     padding-right: 6%;
     padding-top: 10px;
@@ -309,40 +342,34 @@ ol {
 
 .vision {
     font-size: 42px;
-    /* font-family: Arial, Helvetica, sans-serif; */
-    /* font-family: 'Archivo' ; */
     font-family: "Lalezar", system-ui;
     font-weight: 900;
     padding-top: 3%;
     display: inline;
-    /* padding-right: 20%; */
 }
 
 .mission {
     font-size: 42px;
-    /* font-family: Arial, Helvetica, sans-serif; */
     font-family: "Lalezar", system-ui;
     font-weight: 900;
     padding-top: 2%;
     display: inline;
-    /* padding-right: 20%; */
 }
 
 /* Facilities */
 
 .facilities {
-    /* width: 530px; */
     width: 80%;
-    max-width: 1080px;
+    max-width: 1180px;
     height: 450px;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    /* padding-left: 4%; */
     margin-top: 6%;
 }
+
 
 .fc {
     width: 324px;
@@ -352,10 +379,19 @@ ol {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: left;
-    padding-left: 10px;
+    padding-left: 2%;
     border-radius: 15px;
-    border: 2px solid black;
+    border: var(--border);
+    background-color: #F092DD;
+    cursor: pointer;
 }
+
+.fc:hover {
+    /* background-color: white; */
+    background-color: #f04dcf;
+    box-shadow: var(--box-shadow);
+}
+
 
 .img-fc {
     width: 120px;
@@ -364,7 +400,6 @@ ol {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    /* border: var(--border); */
 }
 
 
@@ -374,16 +409,12 @@ ol {
     font-weight: 400;
     font-style: normal;
     font-weight: bold;
-    /* border: var(--border); */
-    /* display: var(--dl); */
-
 }
 
 .fc-text {
     font-size: 18px;
     font-family: "Archivo Narrow", sans-serif;
     margin-top: -10px;
-    /* border: var(--border); */
     width: 90%;
     text-align: justify;
 
@@ -396,7 +427,6 @@ ol {
 .fc-btn {
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
-    /* font-weight: 450; */
     text-decoration: underline;
     font-family: "Archivo Narrow", sans-serif;
     font-weight: 500;
@@ -408,14 +438,12 @@ ol {
 
 .reseach-pr {
     width: 90vw;
-    height: 600px;
+    height: 400px;
     max-width: 1180px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    /* border: var(--border); */
-    /* border: 2px solid black; */
     margin-top: 20px;
 }
 
@@ -423,10 +451,10 @@ ol {
     width: 40%;
     height: 430px;
     border-radius: 20px;
-    /* border: 2px solid black; */
     display: flex;
     flex-wrap: wrap;
 }
+
 
 .reseach-pr-s {
     width: 40%;
@@ -438,47 +466,59 @@ ol {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    cursor: pointer;
 
 }
 
+.reseach-pr-s:hover {
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+
+
 .reseach-pr-cont {
-    /* width: 530px; */
     width: 45%;
     height: 400px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
     align-items: left;
     padding-left: 4%;
-    border: 2px solid black;
+    border: var(--border);
+    background-color: #BCEBCB;
+    cursor: pointer;
 }
+
+.reseach-pr-cont:hover {
+    /* background-color: white; */
+    background-color: #87e4a5;
+    box-shadow: var(--box-shadow);
+}
+
+
 
 .reseach-pr-about {
     font-size: 35px;
-    /* font-family: Arial, Helvetica, sans-serif; */
     font-family: "Lalezar", system-ui;
     font-weight: 900;
     padding-top: 10%;
     display: inline;
     margin-top: 30px;
-    /* padding-right: 20%; */
 }
 
 .reseach-pr-text {
     font-size: 16px;
-    /* font-family: Arial, Helvetica, sans-serif; */
     text-align: justify;
     padding-right: 15%;
     padding-top: 15px;
     margin-top: 10px;
-    font-family:"Red Hat Display", sans-serif;
+    font-family: "Red Hat Display", sans-serif;
 }
 
 .reseach-pr-exp {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    /* font-weight: 450; */
     text-decoration: underline;
     font-family: "Archivo Narrow", sans-serif;
     margin-top: 45px;
@@ -489,10 +529,10 @@ ol {
 
 .Activities-text {
     width: 90vw;
-    max-width: 1080px;
+    max-width: 1180px;
     height: 80px;
     border: var(--border);
-    margin: 1% 0 2% 0;
+    margin: 1% 0 0 0;
     display: grid;
     place-items: center;
     font-size: 18px;
@@ -501,10 +541,16 @@ ol {
     font-family: "Crete Round", serif;
     font-weight: 400;
     text-align: center;
+    background-color: #FFCCF3;
+    cursor: pointer;
+}
+
+.Activities-text:hover {
+    background-color: #ffabeb;
+    box-shadow: var(--box-shadow);
 }
 
 .aclivities {
-    /* width: 530px; */
     width: 86%;
     max-width: 1080px;
     height: 450px;
@@ -513,9 +559,7 @@ ol {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    /* padding-left: 4%; */
     margin-top: 1.5%;
-    /* border: var(--border); */
 }
 
 .fc-act {
@@ -526,10 +570,17 @@ ol {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* padding-left: 10px; */
     border-radius: 15px;
-    border: 2px solid black;
+    border: var(--border);
+    background-color: #F092DD;
+    cursor: pointer;
 }
+
+.fc-act:hover {
+    background-color: #f04dcf;
+    box-shadow: var(--box-shadow);
+}
+
 
 .img-act {
     width: 90%;
@@ -538,7 +589,7 @@ ol {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    border: var(--border);
+    /* border: var(--border); */
 }
 
 
@@ -548,17 +599,15 @@ ol {
     font-weight: 400;
     font-style: normal;
     font-weight: bold;
-    border: var(--border);
-    display: var(--dl);
+    /* border: var(--border); */
 
 }
 
 .act-text {
     font-size: 14px;
     font-family: "Archivo Narrow", sans-serif;
-    /* font-weight: bold; */
     margin-top: -10px;
-    border: var(--border);
+    /* border: var(--border); */
     width: 90%;
     text-align: justify;
 
@@ -569,9 +618,8 @@ ol {
 }
 
 .act-btn {
-    font-size: 16px;
+    font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
-    /* font-weight: 450; */
     text-decoration: underline;
     font-family: "Archivo Narrow", sans-serif;
     margin-top: 10px;
@@ -580,38 +628,91 @@ ol {
 
 /* Publications */
 
-.publicn{
-    /* max-width: 1180px; */
+.publicn {
     width: 86vw;
+    max-width: 1180px;
     height: 457px;
-    /* border: var(--border); */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row: 1fr 1fr 1fr 1fr;
     gap: 8px 8px;
-    margin-top: 2%;
+    margin-top: 1%;
+    /* border: 2px solid black; */
 }
 
-.pb-col-1,.pb-col-2,.pb-col-3,
-.pb-col-4,.pb-col-5,.pb-col-6{
+.pb-col-1,
+.pb-col-2,
+.pb-col-3,
+.pb-col-4,
+.pb-col-5,
+.pb-col-6 {
     border-radius: 15px;
     border: var(--border);
+    cursor: pointer;
 }
 
-.pb-col-2,.pb-col-3,
-.pb-col-4,.pb-col-5,.pb-col-6{
+.pb-col-1:hover {
+    background-color: #fb75dc;
+    box-shadow: var(--box-shadow);
+}
+
+.pb-col-2:hover {
+    background-color: #fb75dc;
+    box-shadow: var(--box-shadow);
+}
+
+.pb-col-3:hover {
+    background-color: #fb75dc;
+    box-shadow: var(--box-shadow);
+}
+
+.pb-col-4:hover {
+    background-color: #fb75dc;
+    box-shadow: var(--box-shadow);
+}
+
+.pb-col-5:hover {
+    background-color: #fb75dc;
+    box-shadow: var(--box-shadow);
+}
+
+.pb-col-5:hover {
+    background-color: #fb75dc;
+    box-shadow: var(--box-shadow);
+}
+
+.pb-col-6:hover {
+    background-color: #fb75dc;
+    box-shadow: var(--box-shadow);
+}
+
+.pb-col-2,
+.pb-col-3,
+.pb-col-4,
+.pb-col-5,
+.pb-col-6 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: #FFCCF3;
 }
 
-.impact{
+.impact {
     font-family: "Archivo Black", sans-serif;
 }
 
-.pb-col-1{
+#impact-id1 {
+    font-size: 18px;
+}
 
+#impact-id2 {
+    font-size: 16px;
+}
+
+.pb-col-1 {
+
+    background-color: #F4B3E5;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -621,65 +722,72 @@ ol {
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
+
+
 }
 
-.pb-col-1-head{
+.pb-col-1-head {
     font-size: 26px;
     padding-left: 3%;
     width: 90%;
-    font-family:"Red Hat Display", sans-serif;
+    font-family: "Red Hat Display", sans-serif;
 }
 
-.pb-col-1-text{
+.pb-col-1-text {
     font-size: 20px;
     padding-left: 3%;
     width: 90%;
-    font-family:"Red Hat Display", sans-serif;
+    font-family: "Red Hat Display", sans-serif;
 }
 
-.pb-col-1-btn{
+.pb-col-1-btn {
     font-size: 18px;
     text-decoration: underline;
     padding-left: 3%;
-    font-family:"Red Hat Display", sans-serif;
+    font-family: "Red Hat Display", sans-serif;
 }
 
-.pb-col-2{
+.pb-col-2 {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
 }
-.pb-col-3{
+
+.pb-col-3 {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
 }
-.pb-col-4{
+
+.pb-col-4 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
 }
-.pb-col-5{
+
+.pb-col-5 {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
 }
-.pb-col-6{
+
+.pb-col-6 {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
 }
 
-.pb-col-2-t{
+.pb-col-2-t {
     font-size: 24px;
     font-family: "Cherry Cream Soda", system-ui;
 }
-.pb-col-2-n{
+
+.pb-col-2-n {
     font-size: 60px;
     font-weight: bold;
     padding-left: 3%;
@@ -687,8 +795,8 @@ ol {
 
 /* Message from HOD */
 
-.msg-hod{
-    max-width: 1080px;
+.msg-hod {
+    max-width: 1180px;
     width: 80vw;
     height: 520px;
     border: var(--border);
@@ -699,21 +807,27 @@ ol {
     align-items: center;
     border-radius: 20px;
     position: relative;
+    background-color: #FDE8E9;
+    cursor: pointer;
 }
 
-.msg-head{
+.msg-hod:hover {
+    background-color: rgb(255, 208, 208)
+}
+
+.msg-head {
     font-size: 48px;
     font-family: "Poppins", sans-serif;
 }
 
-.msg-text{
+.msg-text {
     text-align: justify;
     width: 80%;
     font-size: 18px;
     font-family: "Poppins", sans-serif;
 }
 
-.msg-btn{
+.msg-btn {
     width: 120px;
     height: 50px;
     display: grid;
@@ -721,10 +835,11 @@ ol {
     text-decoration: underline;
     font-size: 20px;
     cursor: pointer;
+    font-family: "Poppins", sans-serif;
 }
 
 
-.commas{
+.commas {
     font-size: 100px;
     position: absolute;
     top: 22%;
@@ -733,7 +848,7 @@ ol {
 
 /* Message from other faculty */
 
-.msg-faculty{
+.msg-faculty {
     max-width: 1080px;
     width: 80vw;
     height: 360px;
@@ -741,53 +856,74 @@ ol {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    /* border: var(--border); */
-    margin-top: 8%;
+    margin-top: 5%;
 }
 
-.msg-fac{
+.msg-fac {
     width: 30%;
-    height: 340px ;
+    height: 340px;
     border: var(--border);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: left;
     padding-left: 2%;
+    background-color: #F7FFF6;
+    cursor: pointer;
 }
 
-.msg-img{
+.msg-fac:hover {
+    background-color: #dbffd6;
+    box-shadow: var(--box-shadow);
+}
+
+.msg-img {
     width: 80%;
     height: 60px;
     display: flex;
     flex-direction: row;
-    /* justify-content: space-evenly; */
     align-items: center;
-    /* border: var(--border); */
     margin-top: 5%;
 }
 
-.msg-img-s{
+.msg-img-s1,
+.msg-img-s2,
+.msg-img-s3 {
     width: 50px;
     height: 50px;
     background-color: rgb(99, 107, 104);
     border-radius: 30px;
     margin-left: 1%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.msg-fac-name{
+.msg-img-s1 {
+    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+}
+
+.msg-img-s2 {
+    background-image: url(images/college/IITR_JT-removebg-preview.png);
+}
+
+.msg-img-s3 {
+    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+}
+
+.msg-fac-name {
     margin-left: 6%;
     font-size: 20px;
     font-weight: bold;
     font-family: "Roboto", sans-serif;
-  font-weight: 700;
+    font-weight: 700;
 }
 
-.msg-fac-text{
+.msg-fac-text {
     text-align: justify;
     width: 92%;
     margin-top: 5%;
-    font-size: 20px;
+    font-size: 17px;
     font-family: "Red Hat Display", sans-serif;
     line-height: 24px;
 }
@@ -795,7 +931,6 @@ ol {
 /* Spotlights */
 
 .Spotlights {
-    /* width: 530px; */
     width: 80%;
     max-width: 1080px;
     height: 450px;
@@ -804,11 +939,10 @@ ol {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    /* padding-left: 4%; */
     margin-top: 2%;
 }
 
-#spot-h{
+#spot-h {
     font-family: "Crete Round", serif;
 }
 
@@ -820,52 +954,55 @@ ol {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: left;
-    padding-left: 10px;
+    padding-left: 15px;
     border-radius: 15px;
-    border: 2px solid black;
+    border: var(--border);
+    background-color: #FFCCF3;
+    cursor: pointer;
 }
 
-.img-spot-1,.img-spot-2,.img-spot-3 {
+.spot:hover {
+    background-color: #fe9de7;
+    box-shadow: var(--box-shadow);
+}
+
+.img-spot-1,
+.img-spot-2,
+.img-spot-3 {
     width: 90%;
     height: 150px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    border: var(--border);
+    /* border: var(--border); */
 }
 
-.img-spot-1{
+.img-spot-1 {
     background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
 }
 
-.img-spot-2{
+.img-spot-2 {
     background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
 }
 
-.img-spot-3{
+.img-spot-3 {
     background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
 }
 
 
 .spot-name {
     font-size: 24px;
-    /* font-family: "Archivo Black", sans-serif; */
     font-family: "Red Hat Display", sans-serif;
     font-weight: 600;
     font-style: normal;
-    /* font-weight: bold; */
-    /* border: var(--border); */
     display: var(--dl);
 
 }
 
 .spot-text {
     font-size: 14px;
-    /* font-family: "Archivo Narrow", sans-serif; */
     font-family: "Red Hat Display", sans-serif;
-    /* font-weight: bold; */
     margin-top: -10px;
-    /* border: var(--border); */
     width: 90%;
     text-align: justify;
 
@@ -878,9 +1015,7 @@ ol {
 .spot-btn {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    /* font-weight: 450; */
     text-decoration: underline;
-    /* font-family: "Archivo Narrow", sans-serif; */
     font-family: "Red Hat Display", sans-serif;
     font-weight: 500;
     margin-top: 10px;
@@ -889,20 +1024,27 @@ ol {
 
 /* Top Requireters */
 
-.requireters{
-   max-width: 1080px;
-   width: 80vw;
-   height: 314px;
-   border: var(--border);
-   border-radius: 20px;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
-   gap: 3px 3px;
+.requireters {
+    max-width: 1080px;
+    width: 80vw;
+    height: 240px;
+    border: var(--border);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3px 3px;
+    background-color: #E6E8E6;
+    cursor: pointer;
 }
 
-.Requireters-text{
+.requireters:hover {
+    background-color: #d3d3d3;
+    box-shadow: var(--box-shadow);
+}
+
+.Requireters-text {
     width: 80vw;
     max-width: 1080px;
     height: 80px;
@@ -915,41 +1057,106 @@ ol {
     border-radius: 15px;
     text-align: center;
     font-family: "Red Rose", serif;
+    cursor: pointer;
 }
 
-.req-s-1,.req-s-2,.req-s-3,.req-s-4,.req-s-5,.req-s-6,.req-s-7,.req-s-8{
-    height: 140px;
-    width: 23%;
-    border: var(--border);
+.Requireters-text:hover {
+    box-shadow: var(--box-shadow);
+}
+
+.req-s-1,
+.req-s-2,
+.req-s-3,
+.req-s-4,
+.req-s-5,
+.req-s-6,
+.req-s-7,
+.req-s-8 {
+    height: 50px;
+    width: 22%;
+    /* border: var(--border); */
     border-radius: 10px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    mix-blend-mode: darken;
+    filter: grayscale(100%);
+    opacity: 1;
+    cursor: pointer;
 }
 
-.req-s-1{
-    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+
+.req-s-1:hover {
+    filter: grayscale(0);
+    opacity: 1;
 }
-.req-s-2{
-    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+
+.req-s-2:hover {
+    filter: grayscale(0);
+    opacity: 1;
 }
-.req-s-3{
-    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+
+.req-s-3:hover {
+    filter: grayscale(0);
+    opacity: 1;
 }
-.req-s-4{
-    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+
+.req-s-4:hover {
+    filter: grayscale(0);
+    opacity: 1;
 }
-.req-s-5{
-    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+
+.req-s-5:hover {
+    filter: grayscale(0);
+    opacity: 1;
 }
-.req-s-6{
-    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+
+.req-s-6:hover {
+    filter: grayscale(0);
+    opacity: 1;
 }
-.req-s-7{
-    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+
+.req-s-7:hover {
+    filter: grayscale(0);
+    opacity: 1;
 }
-.req-s-8{
-    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+
+.req-s-8:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+
+.req-s-1 {
+    background-image: url(images/logos/Aditya\ Birla\ \(Female\ Hiring\).png);
+}
+
+.req-s-2 {
+    background-image: url(images/logos/iffco-removebg-preview.png);
+}
+
+.req-s-3 {
+    background-image: url(images/logos/BioPetroClean\ India\ Pvt.\ Ltd..png);
+}
+
+.req-s-4 {
+    background-image: url(images/logos/Ericsson\ Global\ Services.png);
+}
+
+.req-s-5 {
+    background-image: url(images/logos/jsw-removebg-preview.png);
+}
+
+.req-s-6 {
+    background-image: url(images/logos/Amazon-removebg-preview.png);
+}
+
+.req-s-7 {
+    background-image: url(images/logos/Codeyoung1.png);
+}
+
+.req-s-8 {
+    background-image: url(images/logos/deltax.png);
 }
 
 
@@ -962,13 +1169,13 @@ ol {
 
 .gate-coll {
     width: 90vw;
-    height: 600px;
+    height: 500px;
     max-width: 1180px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    /* border: var(--border); */
+    margin-top: 3%;
 }
 
 .gate-coll-photo {
@@ -982,17 +1189,26 @@ ol {
     border: var(--border);
 }
 
+.gate-coll-photo:hover {
+    box-shadow: var(--box-shadow);
+}
+
 .gate-coll-text {
-    /* width: 530px; */
     width: 45%;
     height: 400px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
     align-items: left;
     padding-left: 3%;
     border: var(--border);
+    background-color: #BCEBCB;
+    cursor: pointer;
+}
+
+.gate-coll-text:hover {
+    box-shadow: var(--box-shadow);
+    background-color: #85e6a4;
 }
 
 .gate-head {
@@ -1002,7 +1218,6 @@ ol {
     padding-top: 10%;
     line-height: 34px;
     display: inline;
-    /* padding-right: 20%; */
 }
 
 .gate-text {
@@ -1023,49 +1238,56 @@ ol {
     place-items: center;
     border-radius: 10px;
     cursor: pointer;
+    font-family: "Red Hat Display", sans-serif;
 }
 
 /* Career */
 
-.career{
+.career {
     max-width: 1080px;
     width: 80vw;
-    height: 483px;
+    height: 423px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
     align-items: left;
     padding-left: 5%;
+    padding-right: 2%;
     border: var(--border);
     border-radius: 20px;
-    padding-top: 5%;
-
+    padding-top: 3%;
+    background-color: #FDE8E9;
+    margin-top: 4%;
+    cursor: pointer;
 }
 
-.career-head{
+.career:hover {
+    box-shadow: var(--box-shadow);
+    background-color: #f8ced0;
+}
+
+.career-head {
     font-size: 32px;
     font-family: "Noto Sans", sans-serif;
 }
 
-.career-text{
+.career-text {
     margin-top: 4%;
     font-size: 22px;
-    /* font-family: "Noto Sans", sans-serif; */
     font-family: "Roboto", sans-serif;
 }
 
-.career-btn{
-   font-size: 22px;
-   text-decoration: underline;
-   margin-top: 6%;
-   font-family: "Roboto", sans-serif;
-   cursor: pointer;
+.career-btn {
+    font-size: 22px;
+    text-decoration: underline;
+    margin-top: 6%;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
 }
 
 
 /* Map */
 
-.map{
+.map {
     max-width: 1080px;
     width: 80vw;
     height: 400px;
@@ -1076,21 +1298,23 @@ ol {
     place-items: center;
 }
 
+.map:hover {
+    box-shadow: var(--box-shadow);
+}
+
 /* Connectivity */
 
 
 .Connectivity {
-    /* width: 530px; */
-    width: 80%;
+    width: 80vw;
     max-width: 1080px;
-    height: 450px;
+    height: 350px;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    /* padding-left: 4%; */
-    margin-top: 2%;
+    margin-top: 0;
 }
 
 .con {
@@ -1103,27 +1327,36 @@ ol {
     align-items: left;
     padding-left: 10px;
     border-radius: 15px;
-    border: 2px solid black;
+    border: var(--border);
+    background-color: #F4B3E5;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
 }
 
-.img-con-1,.img-con-2,.img-con-3 {
+.con:hover {
+    box-shadow: var(--box-shadow);
+    background-color: #f298dd;
+}
+
+.img-con-1,
+.img-con-2,
+.img-con-3 {
     width: 50%;
     height: 100px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    /* border: var(--border); */
 }
 
-.img-con-1{
+.img-con-1 {
     background-image: url(images/college/train-station.png);
 }
 
-.img-con-2{
+.img-con-2 {
     background-image: url(images/college/transport.png);
 }
 
-.img-con-3{
+.img-con-3 {
     background-image: url(images/college/airport.png);
 }
 
@@ -1133,18 +1366,13 @@ ol {
     font-family: "Archivo Black", sans-serif;
     font-weight: 400;
     font-style: normal;
-    /* font-weight: bold; */
-    /* border: var(--border); */
     display: var(--dl);
 
 }
 
 .con-text {
-    font-size: 18px;
-    font-family: poppins, sans-serif;
-    /* font-weight: bold; */
-    margin-top: -10px;
-    /* border: var(--border); */
+    font-size: 20px;
+    margin-top: -5px;
     width: 80%;
     text-align: justify;
     padding-left: 9%;
@@ -1157,7 +1385,7 @@ ol {
 
 /* Footer */
 
-footer{
+footer {
     max-width: 1280px;
     width: 100vw;
     height: 800px;
@@ -1166,17 +1394,16 @@ footer{
     padding-top: 3%;
 }
 
-.foot-coll-add{
+.foot-coll-add {
     width: 40%;
     height: 180px;
     color: white;
     margin-left: 10%;
-    /* border: 2px solid white; */
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
 }
 
-.foot-nav{
+.foot-nav {
     height: 330px;
     width: 80%;
     display: flex;
@@ -1186,11 +1413,10 @@ footer{
     height: 332px;
     width: 70%;
     margin-left: 10%;
-    /* border: 2px solid white; */
     margin-top: 2%;
 }
 
-.foot-nav-s{
+.foot-nav-s {
     height: 328px;
     width: 202px;
     display: flex;
@@ -1199,76 +1425,1845 @@ footer{
     align-items: left;
     color: white;
     margin-right: 13%;
-    /* border: 2px solid white; */
 }
 
-.foot-about{
+.foot-about {
     font-size: 24px;
     font-weight: 600;
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.foot-about-n{
+.foot-about-n {
     font-size: 18px;
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
     cursor: pointer;
 }
 
-.foot-social-h{
+.foot-social-h {
     width: 80vw;
     height: 50px;
     color: white;
     margin-left: 10%;
-    /* border: 2px solid white; */
     padding-top: 6px;
     margin-top: 1%;
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 24px;
 }
-.foot-social-c{
+
+.foot-social-c {
     width: 80vw;
     height: 40px;
     color: white;
     display: flex;
     flex-direction: row;
-    /* justify-content: space-around; */
     align-items: left;
     margin-left: 10%;
-    /* border: 2px solid white; */
     border-bottom: 1px solid white;
     padding-top: 6px;
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.foot-social-i{
+.foot-social-i {
     padding-right: 5%;
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
 }
 
-.developer{
+.developer {
     width: 80vw;
     height: 60px;
     display: grid;
     place-items: center;
     color: white;
     margin-left: 10%;
-    /* border: 2px solid white; */
     margin-top: 1%;
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 14px;
 }
 
-.add-h{
+.add-h {
     font-size: 28px;
     padding-top: 2%;
 }
 
-.add-text{
+.add-text {
     font-size: 18px;
     padding-top: 4%;
+}
+
+/* Laboratory */
+
+.center-heading-lb {
+    width: 90vw;
+    max-width: 1180px;
+    height: 80px;
+    /* border: var(--border); */
+    margin: 2% 0 0 0;
+    display: grid;
+    place-items: center;
+    font-size: 45px;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bold;
+
+}
+
+
+.laboratory {
+    width: 86vw;
+    max-width: 1080px;
+    height: 1600px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* margin-top: 1.5%; */
+}
+
+.lb-act {
+    width: 324px;
+    height: 424px;
+    margin: 0 2px 0 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+    border: var(--border);
+    background-color: #F092DD;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+.lb-act:hover {
+    background-color: #f04dcf;
+    box-shadow: var(--box-shadow);
+}
+
+
+#img-lb {
+    width: 60%;
+    height: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* border: var(--border); */
+}
+
+.img-lb1 {
+    background-image: url(images/college/lab.png);
+}
+
+.img-lb2 {
+    background-image: url(images/college/lab.png);
+}
+
+.img-lb3 {
+    background-image: url(images/college/lab.png);
+}
+
+.img-lb4 {
+    background-image: url(images/college/lab.png);
+}
+
+.img-lb5 {
+    background-image: url(images/college/lab.png);
+}
+
+.img-lb6 {
+    background-image: url(images/college/lab.png);
+}
+
+.img-lb7 {
+    background-image: url(images/college/lab.png);
+}
+
+.img-lb8 {
+    background-image: url(images/college/lab.png);
+}
+
+
+.lb-name {
+    font-size: 20px;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bold;
+    /* border: var(--border); */
+    text-align: center;
+    width: 90%;
+
+}
+
+.lb-text {
+    font-size: 14px;
+    font-family: "Archivo Narrow", sans-serif;
+    margin-top: -10px;
+    /* border: var(--border); */
+    width: 90%;
+    text-align: justify;
+
+}
+
+#lb-text-2 {
+    height: 100px;
+}
+
+.lb-btn {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    font-family: "Archivo Narrow", sans-serif;
+    margin-top: 6px;
+    cursor: pointer;
+    /* text-decoration: none; */
+    color: black;
+}
+
+/* Lab1 */
+
+
+.lab1 {
+    width: 80vw;
+    max-width: 1080px;
+    height: 1400px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+#lab-h {
+    font-family: "Crete Round", serif;
+}
+
+.lab1-s {
+    width: 324px;
+    height: 424px;
+    margin: 0 2px 0 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    padding-left: 15px;
+    border-radius: 15px;
+    border: var(--border);
+    background-color: #FFCCF3;
+    cursor: pointer;
+}
+
+.lab1-s:hover {
+    background-color: #fe9de7;
+    box-shadow: var(--box-shadow);
+}
+
+.img-lab1-1,
+.img-lab1-2,
+.img-lab1-3,
+.img-lab1-4,
+.img-lab1-5,
+.img-lab1-6,
+.img-lab1-7,
+.img-lab1-8  {
+    width: 90%;
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* border: var(--border); */
+    mix-blend-mode: darken;
+}
+
+.img-lab1-1 {
+    background-image: url(images/lab/Heat-Transfer-in-Agitated-Vessel.jpg);
+}
+
+.img-lab1-2 {
+    background-image: url(images/lab/walls.jpg);
+    
+}
+
+.img-lab1-3 {
+    background-image: url(images/lab/H656\ web.jpg);
+}
+.img-lab1-4 {
+    background-image: url(images/lab/shell.jpg);
+}
+.img-lab1-5 {
+    background-image: url(images/lab/parall.png);
+}
+.img-lab1-6 {
+    background-image: url(images/lab/heat-transfer-in-natural-convection-500x500.webp);
+}
+.img-lab1-7 {
+    background-image: url(images/lab/heat-transfer-in-forced-convection.jpg);
+}
+.img-lab1-8 {
+    background-image: url(images/lab/Dropwise-Filmwise-Condensation-Apparatus.jpg);
+}
+
+
+.lab1-name {
+    font-size: 24px;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    display: var(--dl);
+
+}
+
+.lab1-text {
+    font-size: 14px;
+    font-family: "Red Hat Display", sans-serif;
+    margin-top: -10px;
+    width: 90%;
+    text-align: justify;
+
+}
+
+#lab1-text-2 {
+    height: 100px;
+}
+
+.lab1-btn {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #FFCCF3;
+}
+
+
+
+/* Faculty */
+
+.Faculty{
+    width: 90vw;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: -2%; */
+    /* border: 2px solid black; */
+    margin-top: -8%;
+}
+
+#faculty-a{
+    margin-top: -5%;
+}
+
+#Faculty-g{
+    margin-top: 1.5%;
+    height: 360px;
+}
+
+.fac-p{
+    width: 90%;
+    height: 620px;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    border: var(--border);
+}
+
+.fac-p:hover {
+    box-shadow: var(--box-shadow);
+    background-color: #f1f1f1;
+}
+
+#fac-p{
+    width: 90%;
+    height: 340px;
+    border: var(--border);
+    /* border: 2px solid black; */
+}
+
+.fac-p-1{
+    width: 100%;
+    height: 320px;
+    /* border: 2px solid rgb(104, 34, 34); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-fac-p-1,.img-fac-p-2,.img-fac-p-3,.img-fac-p-4,.img-fac-p-5,.img-fac-p-6,.img-fac-p-7
+,.img-fac-p-8,.img-fac-p-9,.img-fac-p-10,.img-fac-p-11,.img-fac-p-12{
+   width: 48%;
+   height: 98%;
+   /* border: 2px solid black; */
+   background-position: center;
+   background-size: contain;
+   background-repeat: no-repeat;
+   margin-bottom: 5%;
+}
+
+.img-fac-p-1{
+    background-image: url(images/faculty/gole.png);
+ }
+.img-fac-p-2{
+    background-image: url(images/faculty/js2.png);
+ }
+.img-fac-p-3{
+    background-image: url(images/faculty/pk.png);
+ }
+.img-fac-p-4{
+    background-image: url(images/faculty/rs.png);
+ }
+.img-fac-p-5{
+    background-image: url(images/faculty/rv.png);
+ }
+.img-fac-p-6{
+    background-image: url(images/faculty/dp.png);
+ }
+.img-fac-p-7{
+    background-image: url(images/faculty/da.png);
+ }
+.img-fac-p-8{
+    background-image: url(images/faculty/py.png);
+ }
+.img-fac-p-9{
+    background-image: url(images/faculty/sp.png);
+ }
+.img-fac-p-10{
+    background-image: url(images/faculty/spt.png);
+ }
+.img-fac-p-11{
+    background-image: url(images/faculty/r1.png);
+ }
+/* .img-fac-p-12{
+    background-image: url(images/faculty/gole.png);
+ }
+.img-fac-p-13{
+    background-image: url(images/faculty/gole.png);
+ } */
+
+.fac-p-1-g{
+    width: 100%;
+    height: 90%;
+    /* border: 2px solid rgb(104, 34, 34); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.fac-p-name{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "Red Hat Display", sans-serif;
+    padding: 0;
+    margin-top: 2%;
+}
+
+.fac-p-position{
+    font-family: "Red Hat Display", sans-serif;
+    /* margin-top: 2%; */
+    font-size: 18px
+    
+   
+}
+
+.fac-p-interest{
+    font-size: 19px;
+    margin-top: 5%;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.fac-p-s-btn{
+    font-size: 16px;
+    text-decoration: none;
+    width: 28%;
+    height: 30px;
+    background-color: #ffffff;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    margin-top: 5%;
+    font-family: "Red Hat Display", sans-serif;
+    color: black;
+    
+}
+
+.fac-p-s-btn-b{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    width: 48%;
+    height: 45px;
+    background-color: #ffffff;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    margin-top: 6%;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.text-fac-p{
+    width: 48%;
+    height: 98%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    align-items: left;
+    padding-left: 3%;
+
+ }
+
+ .fac-p-s{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+
+.fac-p-2{
+    width: 100%;
+    height: 280px;
+    /* border: 2px solid rgb(34, 63, 104); */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.fac-p-c1,.fac-p-c2,.fac-p-c3,.fac-p-c4,.fac-p-c5,.fac-p-c6{
+    width: 33%;
+    height: 33%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30%;
+    border-radius: 20px;
+    margin: 0 5px 0 5px ;
+    background-color: white;
+}
+
+.fac-p-c7,.fac-p-c8{
+    width: 50%;
+    height: 33%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    height: 30%;
+    border-radius: 20px;
+    margin: 0 5px 0 5px ;
+    background-color: white;
+}
+
+.fac-p-t{
+    font-size: 22px;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 20px;
+    padding-left: 2%;
+}
+.fac-p-n{
+    font-size: 44px;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    padding-left: 3.5%;
+}
+
+/* IIChE */
+
+.iiche-name {
+    max-width: 1075px;
+    width: 100%;
+    height: 100px;
+    font-size: 134px;
+    /* font-size: 500%; */
+    line-height: 74%;
+    font-family: "Lalezar", system-ui;
+    font-weight: 600;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    text-transform: uppercase;
+    display: grid;
+    text-align: center;
+    padding-top: 2%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#span-iiche{
+    font-size: 60px;
+    line-height: 45px;
+    padding:0% 1% 0 1%;
+    margin-top: -1%;
+
+}
+
+.iiche-img {
+    max-width: 1024px;
+    width: 90%;
+    height: 600px;
+    border-radius: 100px;
+    background-image: url(images/college/IITR_JT-removebg-preview.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 25px;
+    border: var(--border);
+    border-radius: 35px;
+}
+
+.iiche-coll {
+    width: 90vw;
+    height: 600px;
+    max-width: 1180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0;
+}
+
+.iiche-coll-text {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 4%;
+    border: var(--border);
+    background-color: #BCEBCB;
+    /* transition: background-color 1.2s; */
+    cursor: pointer;
+}
+
+.iiche-coll-text:hover {
+    background-color: #82e7a2;
+    box-shadow: var(--box-shadow);
+}
+
+.about-iiche {
+    font-size: 35px;
+    font-family: "Lalezar", system-ui;
+    /* font-weight: 900; */
+    padding-top: 3%;
+    display: inline;
+}
+
+/* Vision and mission of IIChE */
+
+
+.iiche-cont-v{
+    width: 80vw;
+    max-width: 1280px;
+    height: 430px;
+    /* border: var(--border); */
+    display: grid;
+    grid-template-areas: 
+    "iiche-cont-v1 iiche-cont-v2";
+}
+
+.iiche-cont-v1,.iiche-cont-v2{
+    height: 180px;
+    width: 96%;
+    margin: 2% 2%;
+    border-radius: 10px;
+    border: var(--border);
+    background-color: #F092DD;
+    cursor: pointer;
+}
+
+.iiche-cont-v1:hover {
+    background-color: #ea6dd1;
+    box-shadow: var(--box-shadow);
+}
+.iiche-cont-v2:hover {
+    background-color: #ea6dd1;
+    box-shadow: var(--box-shadow);
+}
+.iiche-cont-v1:hover {
+    background-color: #ea6dd1;
+    box-shadow: var(--box-shadow);
+}
+
+/* IICHe Message */
+.iiche-fc{
+    width: 80%;
+    height: 60px;
+    /* border: var(--border); */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.iiche-fc-img{
+    height: 40px;
+    width: 40px;
+    border: 1.3px solid black;
+    border-radius: 50%;
+    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.iiche-fc-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1%;
+}
+
+
+
+.iiche-v-head{
+    font-size: 24px;
+    padding: 2% 2px 0 3%;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 600;
+}
+.iiche-v-text{
+    font-size: 16px;
+    padding: 2% 2% 0 3%;
+    text-align: justify;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.iiche-fc-position{
+    font-size: 12px;
+    margin-left: -5%;
+    padding-left: 0;
 }
 
 
 
 
+@media screen and (max-width:600px) {
+
+    /* Center Heading */
+
+    .center-heading {
+        width: 90vw;
+        height: 50px;
+        margin: 2% 0 0 0;
+        font-size: 23px;
+
+    }
+
+    .header {
+        width: 100vw;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .college-logo {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+    }
+
+    .other-logo {
+        height: 0;
+        width: 0;
+    }
+
+    .college-name {
+        width: 100%;
+        height: 80px;
+    }
+
+    .coll-name {
+        font-size: .7rem;
+        line-height: 15px;
+        /* line-height: normal; */
+    }
+
+    .coll-name-hindi {
+        font-size: 10px;
+        line-height: normal;
+    }
+
+    .coll-stb {
+        font-size: 8px;
+        line-height: normal;
+    }
+
+    /* Navbar */
+
+    .nav-bar {
+        width: 100vw;
+        height: 40px;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        /* color: white; */
+        color: black;
+        max-width: 980px;
+        width: 80%;
+        margin-left: 12px;
+    }
+
+    ol {
+        font-size: 12px;
+        padding: 0 4px 0 4px;
+    }
+
+    #z {
+        font-size: 0;
+    }
+
+
+
+    /* Hero Section */
+
+
+    .hero-section {
+        height: 80vh;
+    }
+
+    .dept-name {
+        width: 100%;
+        height: 120px;
+        font-size: 52px;
+        /* font-size: 500%; */
+        line-height: 80%;
+        font-family: "Lalezar", system-ui;
+        font-weight: 600;
+        margin-top: 16px;
+        text-transform: uppercase;
+        display: grid;
+        text-align: center;
+        padding-top: 2%;
+
+    }
+
+    .tag-line {
+        width: 100%;
+        height: 20px;
+        font-size: 8px;
+        margin-top: 4%;
+    }
+
+    .dept-img {
+        max-width: 1024px;
+        width: 90%;
+        height: 240px;
+        border-radius: 50px;
+
+    }
+
+    .explore-btn {
+        width: 92px;
+        height: 34px;
+        font-size: 12px;
+        border-radius: 8px;
+        margin-bottom: 1%;
+    }
+
+    /* About Section */
+
+    .about-coll {
+        width: 90vw;
+        height: 100vh;
+        max-width: 1180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 10%;
+    }
+
+    .about-coll-photo {
+        width: 90%;
+        height: 45%;
+        border-radius: 20px;
+    }
+
+    .about-coll-text {
+        width: 90%;
+        height: 50%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding-left: 4%;
+    }
+
+    .about {
+        font-size: 20px;
+        padding-top: 8%;
+        display: inline;
+    }
+
+    .about-text {
+        font-size: 12px;
+        padding-top: 6%;
+    }
+
+    .explore-about {
+        margin-top: 30px;
+        width: 30%;
+        height: 10%;
+        background-color: black;
+        color: white;
+        display: grid;
+        place-items: center;
+        border-radius: 10px;
+        font-family: "Red Hat Display", sans-serif;
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    /* Vision and Mission */
+
+    .vm {
+        width: 86vw;
+        max-width: 1080px;
+        height: 55vh;
+        padding-left: 4%;
+        margin-top: 6%;
+    }
+
+    .vm-text {
+        font-size: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding-right: 6%;
+        padding-top: 10px;
+        color: #515151;
+    }
+
+    .vision,
+    .mission {
+        font-size: 22px;
+        font-family: "Lalezar", system-ui;
+        font-weight: 900;
+        padding-top: 3%;
+        display: inline;
+    }
+
+    /* Facilities */
+
+    .facilities {
+        width: 90vw;
+        height: 150vh;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 6%;
+    }
+
+    .fc {
+        width: 75%;
+        height: 35%;
+        margin: 0 2px 0 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: left;
+        padding-left: 14px;
+        border-radius: 15px;
+        border: var(--border);
+        margin-top: 2%;
+    }
+
+    .img-fc {
+        width: 40%;
+        height: 40%;
+        background-image: url(images/college/lab.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* padding-left: 1%; */
+        margin-left: 2%;
+    }
+
+    #fc-text-2 {
+        height: 50px;
+    }
+
+
+    .fc-name {
+        font-size: 14px;
+        font-family: "Red Hat Display", sans-serif;
+    }
+
+    .fc-text {
+        font-size: 12px;
+        margin-top: -1px;
+        width: 90%;
+        text-align: justify;
+        font-family: "Red Hat Display", sans-serif;
+
+    }
+
+    /* #fc-text-2 {
+        height: 100px;
+    } */
+
+    .fc-btn {
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: underline;
+        font-family: "Archivo Narrow", sans-serif;
+        font-weight: 500;
+        margin-top: 7px;
+        cursor: pointer;
+    }
+
+    /* Research Project */
+
+    .reseach-pr {
+        width: 90vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 8px;
+    }
+
+    .reseach-pr-img {
+        width: 95%;
+        height: 20%;
+        border-radius: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5%;
+    }
+
+
+    .reseach-pr-s {
+        width: 40%;
+        height: 80%;
+        margin: 1% 5%;
+
+    }
+
+    .reseach-pr-cont {
+        width: 95%;
+        height: 40%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding-left: 4%;
+        border: var(--border);
+    }
+
+    .reseach-pr-about {
+        font-size: 20px;
+        font-family: "Lalezar", system-ui;
+        font-weight: 900;
+        padding-top: 2%;
+        display: inline;
+        margin-top: 18px;
+    }
+
+    .reseach-pr-text {
+        font-size: 10px;
+        text-align: justify;
+        padding-right: 15%;
+        padding-top: 15px;
+        margin-top: 10px;
+        font-family: "Red Hat Display", sans-serif;
+    }
+
+    .reseach-pr-exp {
+        font-size: 12px;
+        margin-top: 25px;
+        cursor: pointer;
+        font-family: "Red Hat Display", sans-serif;
+    }
+
+    /* Activities */
+
+    .Activities-text {
+        width: 90vw;
+        font-size: 11px;
+    }
+
+    .aclivities {
+        width: 90vw;
+        max-width: 1080px;
+        height: 220vh;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5%;
+    }
+
+    .fc-act {
+        width: 80%;
+        height: 80%;
+        margin: 5px 2px 0 2px;
+        margin-top: 3%;
+    }
+
+
+    .img-act {
+        width: 80%;
+        height: 70%;
+    }
+
+    .act-name {
+        font-size: 18px;
+    }
+
+    .act-btn {
+        font-size: 14px;
+    }
+
+    /* Publications */
+
+    .publicn {
+        width: 94vw;
+        height: 120vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 4px 4px;
+        margin-top: 2%;
+    }
+
+    .pb-col-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .pb-col-1-head {
+        font-size: 16px;
+    }
+
+    .pb-col-1-text {
+        font-size: 20px;
+        padding-left: 3%;
+        width: 90%;
+        font-family: "Red Hat Display", sans-serif;
+    }
+
+    .pb-col-1-btn {
+        font-size: 12px;
+        text-decoration: underline;
+        padding-left: 3%;
+        font-family: "Red Hat Display", sans-serif;
+    }
+
+    .pb-col-2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .pb-col-3 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .pb-col-4 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .pb-col-5 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .pb-col-6 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+
+    .pb-col-1-text {
+        font-size: 12px;
+        padding-left: 3%;
+        width: 90%;
+        font-family: "Red Hat Display", sans-serif;
+    }
+
+    .pb-col-2-t {
+        font-size: 12px;
+        font-family: "Cherry Cream Soda", system-ui;
+    }
+
+    .pb-col-2-n {
+        font-size: 30px;
+        font-weight: bold;
+        padding-left: 3%;
+    }
+
+    #impact-id1 {
+        font-size: 8px;
+    }
+
+    #impact-id2 {
+        font-size: 7px;
+    }
+
+    /* Message from HOD */
+
+    .msg-hod {
+        width: 94vw;
+        height: 120vh;
+        margin-top: 4%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .msg-head {
+        font-size: 24px;
+        padding-top: 7%;
+    }
+
+    .msg-text {
+        font-size: 14px;
+        padding-top: 5%;
+    }
+
+    .msg-btn {
+        width: 80px;
+        height: 30px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    /* Message from other faculty */
+
+    .msg-faculty {
+        width: 90vw;
+        height: 70vh;
+        display: flex;
+        /* flex-direction: row; */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 2%;
+        /* border: 2px solid black; */
+    }
+
+    .msg-fac {
+        width: 48%;
+        height: 160px;
+        margin-top: 1%;
+        margin-right: 1%;
+    }
+
+    .msg-img {
+        width: 80%;
+        height: 15%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 5%;
+    }
+
+    .msg-img-s1 {
+        width: 25px;
+        height: 25px;
+    }
+
+    .msg-img-s2 {
+        width: 25px;
+        height: 25px;
+    }
+
+    .msg-img-s3 {
+        width: 25px;
+        height: 25px;
+    }
+
+    .msg-fac-name {
+        margin-left: 6%;
+        font-size: 12px;
+    }
+
+    .msg-fac-text {
+        text-align: justify;
+        width: 92%;
+        margin-top: 5%;
+        font-size: 10px;
+        font-family: "Red Hat Display", sans-serif;
+        line-height: 13px;
+    }
+
+
+    /* Spotlights */
+
+    .Spotlights {
+        width: 90vw;
+        height: 200vh;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 6%;
+    }
+
+    #spot-h {
+        font-size: 36px;
+    }
+
+    .spot {
+        width: 85%;
+        height: 340px;
+        margin-top: 3%;
+    }
+
+    .img-spot-1,
+    .img-spot-2,
+    .img-spot-3 {
+        width: 80%;
+        height: 40%;
+    }
+
+    .spot-name {
+        font-size: 16px;
+        font-weight: 800;
+
+    }
+
+    .spot-text {
+        font-size: 12px;
+
+    }
+
+    .spot-btn {
+        font-size: 12px;
+    }
+
+    /* Top Requireters */
+
+    .requireters {
+        width: 96vw;
+        height: 90px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: hidden;
+        padding-top: 3%;
+    }
+
+    .Requireters-text {
+        width: 96vw;
+        height: 80px;
+        margin: .5% 0 1.5% 0;
+        font-size: 12px;
+        padding: 1px 2% 1px 2%;
+    }
+
+    .req-s-1,
+    .req-s-2,
+    .req-s-3,
+    .req-s-4,
+    .req-s-5,
+    .req-s-6,
+    .req-s-7,
+    .req-s-8 {
+        height: 30px;
+        width: 25%;
+        padding: 15px 1% 15px 1%;
+    }
+
+    /* Gate Score */
+
+    .gate-coll {
+        width: 90vw;
+        height: 100vh;
+        max-width: 1180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 7%;
+    }
+
+    .gate-coll-photo {
+        width: 90%;
+        height: 38%;
+        border-radius: 20px;
+        margin-top: 4%;
+    }
+
+    .gate-coll-text {
+        width: 90%;
+        height: 60%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding-left: 4%;
+    }
+
+    .gate-head {
+        font-size: 20px;
+        padding-top: 8%;
+        display: inline;
+    }
+
+    .gate-text {
+        font-size: 12px;
+    }
+
+    .explore-gate {
+        margin-top: 25px;
+        width: 30%;
+        height: 10%;
+        font-size: 12px;
+    }
+
+    /* Career */
+
+    .career {
+        width: 88vw;
+        height: 70vh;
+        display: flex;
+        padding-top: 5%;
+        padding-left: 3.5%;
+        padding-right: 2%;
+        margin-top: 9%;
+    }
+
+    .career-head {
+        font-size: 20px;
+    }
+
+    .career-text {
+        margin-top: 8%;
+        font-size: 14px;
+    }
+
+    .career-btn {
+        font-size: 14px;
+        margin-top: 8%;
+    }
+
+    /* Map */
+
+    .map {
+        height: 40vh;
+        width: 92vw;
+    }
+
+    .Connectivity {
+        width: 90vw;
+        height: 24vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .con {
+        width: 30%;
+        height: 80%;
+        margin: 0 2px 0 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: left;
+        padding-left: 10px;
+        border-radius: 15px;
+        border: var(--border);
+        margin-top: 2%;
+    }
+
+    .img-con-1,
+    .img-con-2,
+    .img-con-3 {
+        width: 50%;
+        height: 60%;
+    }
+
+    .con-name {
+        font-size: 12px;
+    }
+
+    .con-text {
+        font-size: 10px;
+        padding-left: 2%;
+    }
+
+    /* Footer */
+
+    footer {
+        max-width: 1280px;
+        width: 100vw;
+        height: 140vh;
+        background-color: black;
+        opacity: 88%;
+        padding-top: 3%;
+        margin-top: 2%;
+    }
+
+    .foot-coll-add {
+        width: 90%;
+        height: 120px;
+        color: white;
+        margin-left: 7%;
+        font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+    }
+
+    .add-h {
+        font-size: 20px;
+        padding-top: 2%;
+    }
+
+    .add-text {
+        font-size: 12px;
+        padding-top: 3%;
+    }
+
+    .foot-nav {
+        height: 65vh;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 332px;
+        width: 70%;
+        margin-left: 4%;
+        margin-top: 8%;
+    }
+
+    .foot-nav-s {
+        height: 150px;
+        width: 80%;
+        margin-right: 13%;
+        padding-top: 8%;
+    }
+
+    .foot-about {
+        font-size: 18px;
+    }
+
+    .foot-about-n {
+        font-size: 14px;
+    }
+
+    .foot-social-h {
+        width: 80vw;
+        height: 50px;
+        color: white;
+        margin-left: 6%;
+        padding-top: 6px;
+        margin-top: 12%;
+        font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+    }
+
+    .foot-social-c {
+        width: 80vw;
+        height: 40px;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 6%;
+        border-bottom: 1px solid white;
+        padding-top: 2px;
+        font-size: 10px;
+        font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .foot-social-i {
+        padding-right: 5%;
+        font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 12px;
+    }
+
+    .developer {
+        width: 80vw;
+        height: 40px;
+        font-size: 10px;
+    }
+
+    /* Lab1 */
+
+    .lab1 {
+        width: 96vw;
+        max-width: 1080px;
+        height: 1050px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lab1-s {
+        width: 40%;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+    }
+
+    .lab1-name {
+        font-size: 18px;
+        margin-top: 5%;
+
+    }
+
+    .lab1-text {
+        font-size: 10px;
+        margin-top: 3%;
+
+    }
+
+    #lab1-text-2 {
+        height: 100px;
+    }
+
+    .lab1-btn {
+        font-size: 12px;
+    }
+
+    .img-lab1-1,
+    .img-lab1-2,
+    .img-lab1-3 {
+        width: 90%;
+        height: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* border: var(--border); */
+        margin-top: 6%;
+    }
+
+    /* Faculty */
+
+    .Faculty{
+        width: 100vw;
+        height: 940px;
+
+    }
+    
+    .fac-p{
+        width: 90%;
+        height: 750px;
+        /* border: 2px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* align-items: center; */
+        background-color: #f7f7f7;
+        border-radius: 20px;
+        margin-top: 5%;
+    }
+    
+    .fac-p-1{
+        width: 100%;
+        height: 45%;
+        /* border: 2px solid rgb(104, 34, 34); */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fac-p-1-g{
+        width: 100%;
+        height: 90%;
+        /* border: 2px solid rgb(104, 34, 34); */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .img-fac-p{
+       width: 98%;
+       height: 240px;
+       /* border: 2px solid black; */
+       background-image: url(images/faculty/gole.png);
+       background-position: center;
+       background-size: contain;
+       background-repeat: no-repeat;
+       margin-bottom: 5%;
+    }
+    
+    .fac-p-name{
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Red Hat Display", sans-serif;
+        padding: 0;
+        margin-top: 2%;
+    }
+    
+    .fac-p-position{
+        font-family: "Red Hat Display", sans-serif;
+        /* margin-top: 2%; */
+        font-size: 12px
+        
+       
+    }
+    
+    .fac-p-interest{
+        font-size: 13px;
+        margin-top: 5%;
+        font-family: "Red Hat Display", sans-serif;
+    }
+    
+    .fac-p-s-btn{
+        font-size: 13px;
+        text-decoration: none;
+        width: 28%;
+        height: 27px;
+        background-color: #ffffff;
+        display: grid;
+        place-items: center;
+        border-radius: 20px;
+        margin-top: 3%;
+        font-family: "Red Hat Display", sans-serif;
+        color: black;
+        
+    }
+    
+    .fac-p-s-btn-b{
+        color: black;
+        font-size: 13px;
+        text-decoration: none;
+        width: 38%;
+        height: 35px;
+        background-color: #ffffff;
+        display: grid;
+        place-items: center;
+        border-radius: 20px;
+        margin-top: 3%;
+        font-family: "Red Hat Display", sans-serif;
+    }
+    
+    .text-fac-p{
+        width: 98%;
+        height: 48%;
+        /* border: 2px solid black; */
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+        align-items: left;
+        padding-left: 3%;
+    
+     }
+    
+     .fac-p-s{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+     }
+    
+    .fac-p-2{
+        width: 100%;
+        height: 38%;
+        /* border: 2px solid rgb(34, 63, 104); */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8%;
+    
+    }
+    
+    .fac-p-c1,.fac-p-c2,.fac-p-c3,.fac-p-c4,.fac-p-c5,.fac-p-c6,.fac-p-c7,.fac-p-c8{
+        width: 45%;
+        height: 80px;
+        /* border: 2px solid black; */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        margin-bottom: 2%;
+    }
+    
+    
+    .fac-p-t{
+        font-size: 12px;
+        font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 20px;
+        padding-left: 4%;
+        padding-right: 1%;
+    }
+    .fac-p-n{
+        font-size: 24px;
+        font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        padding-left: 3.5%;
+    }
+
+    #img-fac-p{
+        width: 96%;
+        height: 300px;
+        /* border: 2px solid black; */
+        background-image: url(images/faculty/gole.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: 5%;
+     }
+
+     #fac-p{
+        margin-top: 1.5%;
+        height: 360px;
+    }
+    
+    
+
+}
