@@ -50,7 +50,8 @@ body {
 /* Center Heading */
 
 .center-heading {
-    width: 90vw;
+    -webkit-background-clip: text;
+    width: 35vw;
     max-width: 1180px;
     height: 80px;
     /* border: var(--border); */
@@ -62,7 +63,18 @@ body {
     font-weight: 400;
     font-style: normal;
     font-weight: bold;
+    /* color: white; */
+    /* -webkit-text-fill-color: transparent; */
+    animation: animate 10s linear infinite;
+    /* background-size: 400%; */
+    /* background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%); */
+    /* background-color: black; */
+}
 
+@keyframes animate {
+    100%{
+        background-position: 35vw;
+    }
 }
 
 .header {
@@ -196,6 +208,10 @@ ol {
     display: grid;
     text-align: center;
     padding-top: 2%;
+    -webkit-text-stroke: 1px #fff;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: url(images/college/back.png);
 }
 
 .tag-line {
@@ -1487,6 +1503,8 @@ footer {
     padding-right: 5%;
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
+    text-decoration: none;
+    color: white;
 }
 
 .developer {
@@ -1827,25 +1845,26 @@ footer {
    background-size: contain;
    background-repeat: no-repeat;
    margin-bottom: 5%;
+   mix-blend-mode: darken;
 }
 
 .img-fac-p-1{
     background-image: url(images/faculty/gole.png);
  }
 .img-fac-p-2{
-    background-image: url(images/faculty/js2.png);
+    background-image: url(images/faculty/js2.jpg);
  }
 .img-fac-p-3{
-    background-image: url(images/faculty/pk.png);
+    background-image: url(images/faculty/pk.jpg);
  }
 .img-fac-p-4{
-    background-image: url(images/faculty/rs.png);
+    background-image: url(images/faculty/rs.jpg);
  }
 .img-fac-p-5{
-    background-image: url(images/faculty/rv.png);
+    background-image: url(images/faculty/rv.jpg);
  }
 .img-fac-p-6{
-    background-image: url(images/faculty/dp.png);
+    background-image: url(images/faculty/dp.jpg);
  }
 .img-fac-p-7{
     background-image: url(images/faculty/da.png);
@@ -1860,7 +1879,7 @@ footer {
     background-image: url(images/faculty/spt.png);
  }
 .img-fac-p-11{
-    background-image: url(images/faculty/r1.png);
+    background-image: url(images/faculty/r1.jpg);
  }
 /* .img-fac-p-12{
     background-image: url(images/faculty/gole.png);
@@ -2465,11 +2484,27 @@ footer {
     width: 30px;
 }
 
-
 @media screen and (max-width: 768px) {
     .slider {
       height: 300px;
     }
+
+/* Animation */
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s esae;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+
 
 
     /* #slider-s {
@@ -2582,7 +2617,7 @@ footer {
 
 
     .hero-section {
-        height: 80vh;
+        height: 480px;
     }
 
     .dept-name {
@@ -2628,7 +2663,7 @@ footer {
 
     .about-coll {
         width: 90vw;
-        height: 100vh;
+        height: 540px;
         max-width: 1180px;
         display: flex;
         flex-direction: column;
@@ -2681,9 +2716,9 @@ footer {
     /* Vision and Mission */
 
     .vm {
-        width: 86vw;
+        width: 90vw;
         max-width: 1080px;
-        height: 55vh;
+        height: 270px;
         padding-left: 4%;
         margin-top: 6%;
     }
@@ -2710,7 +2745,7 @@ footer {
 
     .facilities {
         width: 90vw;
-        height: 150vh;
+        height: 1100px;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
@@ -2852,7 +2887,7 @@ footer {
     .aclivities {
         width: 90vw;
         max-width: 1080px;
-        height: 220vh;
+        height: 1200px;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
@@ -2886,7 +2921,7 @@ footer {
 
     .publicn {
         width: 94vw;
-        height: 120vh;
+        height: 550px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-row: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -2984,7 +3019,7 @@ footer {
 
     .msg-hod {
         width: 94vw;
-        height: 120vh;
+        height: 580px;
         margin-top: 4%;
         display: flex;
         flex-direction: column;
@@ -3013,7 +3048,7 @@ footer {
 
     .msg-faculty {
         width: 90vw;
-        height: 70vh;
+        height: 360px;
         display: flex;
         /* flex-direction: row; */
         justify-content: center;
@@ -3073,7 +3108,7 @@ footer {
 
     .Spotlights {
         width: 90vw;
-        height: 200vh;
+        height: 1100px;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
@@ -3151,7 +3186,7 @@ footer {
 
     .gate-coll {
         width: 90vw;
-        height: 100vh;
+        height: 500px;
         max-width: 1180px;
         display: flex;
         flex-direction: column;
@@ -3198,7 +3233,7 @@ footer {
 
     .career {
         width: 88vw;
-        height: 70vh;
+        height: 370px;
         display: flex;
         padding-top: 5%;
         padding-left: 3.5%;
@@ -3229,7 +3264,7 @@ footer {
 
     .Connectivity {
         width: 90vw;
-        height: 24vh;
+        height: 160px;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -3271,7 +3306,7 @@ footer {
     footer {
         max-width: 1280px;
         width: 100vw;
-        height: 140vh;
+        height: 1120px;
         background-color: black;
         opacity: 88%;
         padding-top: 3%;
