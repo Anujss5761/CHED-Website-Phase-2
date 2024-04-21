@@ -50,7 +50,7 @@ body {
 /* Center Heading */
 
 .center-heading {
-    /* -webkit-background-clip: text; */
+    /* --webkit-background-clip: text; */
     width: 35vw;
     max-width: 1180px;
     height: 80px;
@@ -64,7 +64,7 @@ body {
     font-style: normal;
     font-weight: bold;
     /* color: white; */
-    /* -webkit-text-fill-color: transparent; */
+    /* --webkit-text-fill-color: transparent; */
     /* animation: animate 10s linear infinite; */
     /* background-size: 400%; */
     /* background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%); */
@@ -208,10 +208,10 @@ ol {
     display: grid;
     text-align: center;
     padding-top: 2%;
-    /* -webkit-text-stroke: 1px #fff;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: url(images/college/back.png); */
+    /* --webkit-text-stroke: 1px #fff; */
+    /* --webkit-background-clip: text; */
+    /* color: transparent; */
+    /* background-image: url(images/college/back.png); */
 }
 
 .tag-line {
@@ -228,7 +228,6 @@ ol {
     height: 391px;
     border-radius: 80px;
     /* background-image: url(images/college/IITR_JT-removebg-preview.png); */
-    /* background-image: url(images/college/Department-crop-img.png); */
     background-image: url(images/college/dept1.png);
     background-position: center;
     background-size: contain;
@@ -409,7 +408,6 @@ ol {
 }
 
 .fc:hover {
-    /* background-color: white; */
     background-color: #f04dcf;
     box-shadow: var(--box-shadow);
 }
@@ -485,7 +483,6 @@ ol {
     border: var(--border);
     margin: 5% 5%;
     border-radius: 10px;
-    /* background-image: url(images/college/lab.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -514,7 +511,6 @@ ol {
 }
 
 .reseach-pr-cont:hover {
-    /* background-color: white; */
     background-color: #87e4a5;
     box-shadow: var(--box-shadow);
 }
@@ -608,7 +604,6 @@ ol {
 .img-act-1,.img-act-2,.img-act-3 {
     width: 90%;
     height: 70%;
-    /* background-image: url(images/college/lab.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -745,19 +740,15 @@ ol {
 }
 
 .pb-col-1 {
-
     background-color: #F4B3E5;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: left;
-
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
-
-
 }
 
 .pb-col-1-head {
@@ -1787,7 +1778,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-top: -2%; */
     /* border: 2px solid black; */
     margin-top: -8%;
 }
@@ -1829,7 +1819,6 @@ footer {
 .fac-p-1{
     width: 100%;
     height: 320px;
-    /* border: 2px solid rgb(104, 34, 34); */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1881,12 +1870,6 @@ footer {
 .img-fac-p-11{
     background-image: url(images/faculty/r1.jpg);
  }
-/* .img-fac-p-12{
-    background-image: url(images/faculty/gole.png);
- }
-.img-fac-p-13{
-    background-image: url(images/faculty/gole.png);
- } */
 
 .fac-p-1-g{
     width: 100%;
@@ -1908,7 +1891,6 @@ footer {
 
 .fac-p-position{
     font-family: "Red Hat Display", sans-serif;
-    /* margin-top: 2%; */
     font-size: 18px
     
    
@@ -1955,7 +1937,6 @@ footer {
     /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
     align-items: left;
     padding-left: 3%;
 
@@ -2489,13 +2470,20 @@ footer {
       height: 300px;
     }
 
+    .slider .buttons button {
+        width: 25px;
+        height: 25px;
+    }
+
+}
+
 /* Animation */
 
 .reveal{
     position: relative;
-    transform: translateY(150px);
+    transform: translateY(130px);
     opacity: 0;
-    transition: all 2s esae;
+    transition: all .9s ease-in-out;
 }
 
 .reveal.active{
@@ -2504,20 +2492,7 @@ footer {
 }
 
 
-
-
-
-    /* #slider-s {
-      height: 192px;
-      width: 96%;
-  } */
-
-    .slider .buttons button {
-        width: 25px;
-        height: 25px;
-    }
-}
-
+   
 
 @media screen and (max-width:600px) {
 
@@ -3883,5 +3858,17 @@ footer {
         width: 98%;
         height: 220px;
     }
+
+    /* .reveal{
+        position: relative;
+        transform: translateY(280px);
+        opacity: 0;
+        transition: all 2.5s ease-in-out;
+    }
+    
+    .reveal.active{
+        transform: translateY(0px);
+        opacity: 1;
+    } */
 
 }
