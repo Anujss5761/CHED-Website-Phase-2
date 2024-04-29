@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Coiny&family=Damion&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Romanesco&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <div class="nav-bar">
+        <ul>
+            <ol><a id="nav-a" href="index.html">Home</a></ol>
+            <ol> <a id="nav-a" href="Faculty.html">Faculty</a></ol>
+            <ol> <a id="nav-a" href="iiche.html">IIChE</a></ol>
+            <ol><a id="nav-a" href="labs.html">Labs</a></a></ol>
+            <ol><a id="nav-a" onclick="alert('Available soon...')" href="#">Activities</a></ol>
+            <ol> <a id="nav-a" onclick="alert('Available soon...')" href="#">Placements</a></ol>
+            <ol id="z" onclick="alert('Available soon...')">Projects</ol>
+            <ol id="z">Contacts</ol>
+        </ul>
+    </div>
+
+
+    <!-- Activities -->
+
+    <div class="contact">
+        <div class="contact-p-1">
+            <p class="cont-p-text">Contact Us</p>
+
+            <P class="cont-p-text-s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel iste ullam
+                quos? Ex excepturi nam animi non mollitia facere, error placeat consequatur quo omnis?</P>
+
+            <a class="cont-p-text-em" href="http://" target="_blank" rel="noopener noreferrer">contactus@gmail.com</a>
+
+            <p class="cont-p-text-sup">Support: +91 8900997744</p>
+        </div>
+        <form  class="contact-p-2" onsubmit="emailSend(); reset(); return false;">
+            <p class="contact-p-2-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt vero
+                adipisci</p>
+
+            <label for="">Name</label><input class="contact-name" id="name" type="text" required>
+            <label for="">Email</label><input class="contact-email" id="email" type="email" required>
+            <label for="">Number</label><input class="contact-number" id="phone" type="number" >
+            <label for="">Message</label><textarea class="contact-textarea" name="Message" id="" cols="30"
+                rows="20"></textarea>
+
+            <button class="contact-button" id="contact-button" type="submit">Send Message</button>
+            </form>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>

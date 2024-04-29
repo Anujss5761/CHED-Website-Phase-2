@@ -60,3 +60,35 @@ function reveal(){
     }
 }
 
+
+
+// Email
+
+function emailSend(){
+
+	var userName = document.getElementById('name').value;
+	var phone = document.getElementById('phone').value;
+	var email = document.getElementById('email').value;
+
+	var messageBody = "Name " + userName +
+	"<br/> Phone " + phone +
+	"<br/> Email " + email;
+	Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "anujs5761@gmail.com",
+    Password : "DA8A8E52348E9E686383687951B429B452D4",
+    To : '2022061048@mmmut.ac.in',
+    From : "anujs5761@gmail.com",
+    Subject : "This is the subject",
+    Body : messageBody
+}).then(
+  message => {
+  	if(message=='OK'){
+  		swal("Secussful", "You clicked the button!", "success");
+  	}
+  	else{
+  		swal("Error", "You clicked the button!", "error");
+  	}
+  }
+);
+}
