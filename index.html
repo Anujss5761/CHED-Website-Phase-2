@@ -28,6 +28,9 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 </head>
 
 <body>
@@ -49,9 +52,9 @@
             <ol> <a id="nav-a" href="Faculty.html">Faculty</a></ol>
             <ol> <a id="nav-a" href="iiche.html">IIChE</a></ol>
             <ol><a id="nav-a" href="labs.html">Labs</a></a></ol>
-            <ol><a id="nav-a" onclick="alert('Available soon...')" href="#">Activities</a></ol>
-            <ol> <a id="nav-a" onclick="alert('Available soon...')" href="#">Placements</a></ol>
-            <ol id="z" onclick="alert('Available soon...')">Projects</ol>
+            <ol><a id="nav-a"  href="pro-poster.html">Activities</a></ol>
+            <ol> <a id="nav-a"  href="programmes.html">Programmes</a></ol>
+            <ol><a id="nav-a" href="project.html">Projects</a></a></ol>
             <ol><a id="nav-a" href="contact.html">Contact</a></ol>
         </ul>
     </div>
@@ -60,24 +63,24 @@
         <div class="dept-name">Chemical Engineering Department</div>
         <div class="tag-line">Solve Global Challenges. Start Your Chemical Engineering Journey Here.</div>
         <div class="dept-img"></div>
-        <div class="explore-btn">Explore</div>
+        <!-- <div class="explore-btn" onclick="alert('Available Soon...')" >Explore</div> -->
     </div>
     <!-- About Section -->
     <div class="about-coll">
-        <div class="about-coll-photo reveal">
+        <div class="about-coll-photo">
         </div>
-        <div class="about-coll-text reveal">
+        <div class="about-coll-text">
             <p class="about">About the Department</p>
             <p class="about-text">Department of Chemical Engineering has been started in the academic session 2016-17
                 with intake of 60.First graduated in year 2020 and more than 50% student from first batch joined the
                 industries, higher education at national and international level. Student received the fellowship of
                 international agency like MEXT, Japan, etc.</p>
-            <p class="explore-about">Explore</p>
+            <a class="explore-about" href="about-dept.html">Explore</a>
         </div>
     </div>
 
     <!-- Vision and Mission -->
-    <div class="vm reveal">
+    <div class="vm">
         <p class="vision">Department Vision</p>
         <p class="vm-text">To become a globally leading Chemical Engineering Department by imparting quality education
             through excellence in teaching, research and innovation.</p>
@@ -103,33 +106,33 @@
 
     <!-- Facilities -->
 
-    <div class="facilities">
-        <div class="fc reveal">
+    <!-- <div class="facilities">
+        <div class="fc">
             <div class="img-fc"></div>
             <p class="fc-name">Lab</p>
             <p class="fc-text">These labs provide hands-on experience with equipment used in various chemical
                 engineering processes, like distillation, filtration, and heat transfer.</p>
-            <p class="fc-btn">Lear More</p>
+             <a class="fc-btn" href="labs.html">Learn More</a>
         </div>
-        <div class="fc reveal">
+        <div class="fc">
             <div class="img-fc"></div>
             <p class="fc-name">Shops</p>
             <p class="fc-text" id="fc-text-2">These workshops allow students to fabricate parts and equipment needed for
                 their research projects.</p>
-            <p class="fc-btn">Lear More</p>
+             <a class="fc-btn" href="labs.html">Learn More</a>
         </div>
-        <div class="fc reveal">
+        <div class="fc">
             <div class="img-fc"></div>
             <p class="fc-name">Safety equipment rooms</p>
             <p class="fc-text">Stocked with personal protective equipment (PPE) and safety protocols in place, these
                 rooms ensure a safe environment for experimentation.</p>
-            <p class="fc-btn">Lear More</p>
+             <a class="fc-btn" href="labs.html">Learn More</a>
         </div>
-    </div>
+    </div> -->
 
     <!-- Research Projects -->
 
-    <div class="center-heading reveal">
+    <div class="center-heading">
         <p>Research Project</p>
     </div>
 
@@ -138,13 +141,14 @@
             <p class="reseach-pr-about">Projects Shaping Our Future</p>
             <p class="reseach-pr-text">Our projects are driven by a passion to make a difference. We collaborate with
                 leading industries and research institutions, ensuring our solutions have a real-world application.</p>
-            <p class="reseach-pr-exp">Learn More</p>
+            <!-- <p class="reseach-pr-exp" onclick="alert('Available Soon...')" >Learn More</p> -->
+            <a class="reseach-pr-exp" href="project.html">Learn More</a>
         </div>
         <div class="reseach-pr-img reveal reveal">
-            <div class="reseach-pr-s reveal"></div>
-            <div class="reseach-pr-s reveal"></div>
-            <div class="reseach-pr-s reveals"></div>
-            <div class="reseach-pr-s reveals"></div>
+            <div class="reseach-pr-s reveal reseach-pr-s-1"></div>
+            <div class="reseach-pr-s reveal reseach-pr-s-2"></div>
+            <div class="reseach-pr-s reveals reseach-pr-s-3"></div>
+            <div class="reseach-pr-s reveals reseach-pr-s-4"></div>
         </div>
     </div>
 
@@ -162,29 +166,29 @@
     <div class="aclivities">
         <div class="fc-act reveal">
             <div class="img-act-1"></div>
-            <p class="act-name">Expert Talk</p>
-            <p class="act-btn">Learn More</p>
+            <p class="act-name">Debate Competition</p>
+             <a class="act-btn" href="iiche.html">Learn More</a>
         </div>
         <div class="fc-act reveal">
             <div class="img-act-2"></div>
             <p class="act-name">Maind De Dazzle</p>
-            <p class="act-btn">Learn More</p>
+             <a class="act-btn" href="iiche.html">Learn More</a>
         </div>
         <div class="fc-act reveal">
             <div class="img-act-3"></div>
             <p class="act-name">Chemisch'Graphy</p>
-            <p class="act-btn">Learn More</p>
+             <a class="act-btn" href="iiche.html">Learn More</a>
         </div>
     </div>
 
     <!-- Publications -->
 
-    <div class="center-heading reveal">
+    <div class="center-heading">
         <p>Publications</p>
     </div>
 
     <div class="publicn ">
-        <div class="pb-col-1 reveal">
+        <div class="pb-col-1">
             <p class="pb-col-1-head"><strong>Advancing Chemical Engineering</strong>: Research and Publications at MMMUT
             </p>
             <p class="pb-col-1-text">The Department of Chemical Engineering at MMMUT is committed to pushing the
@@ -192,33 +196,33 @@
                 addresses critical challenges in various areas.</p>
             <p class="pb-col-1-btn">Learn More</p>
         </div>
-        <div class="pb-col-2 reveal">
+        <div class="pb-col-2">
             <p class="pb-col-2-t">Highest <br><strong class="impact">Impact Factor</strong></p>
-            <p class="pb-col-2-n">0.0+</p>
+            <p class="pb-col-2-n counetr">10.65</p>
         </div>
-        <div class="pb-col-3 reveal">
+        <div class="pb-col-3">
             <p class="pb-col-2-t">Total no. of <br><strong class="impact"> Web of Science</strong></p>
-            <p class="pb-col-2-n">0.0+</p>
+            <p class="pb-col-2-n counetr">70.0</p>
         </div>
-        <div class="pb-col-4 reveal">
+        <div class="pb-col-4">
             <p class="pb-col-2-t">Total no. of<strong class="impact" id="impact-id2"> International
                     Conferencesr</strong></p>
-            <p class="pb-col-2-n">0.0+</p>
+            <p class="pb-col-2-n counetr">8.00</p>
         </div>
-        <div class="pb-col-5 reveal">
+        <div class="pb-col-5">
             <p class="pb-col-2-t">Total no. of<br><strong class="impact" id="impact-id1"> International
                     Journals</strong></p>
-            <p class="pb-col-2-n">0.0+</p>
+            <p class="pb-col-2-n counetr">42.0</p>
         </div>
-        <div class="pb-col-6 reveal">
+        <div class="pb-col-6">
             <p class="pb-col-2-t">Total no. of <br><strong class="impact"> Book Chapter</strong></p>
-            <p class="pb-col-2-n">0.0+</p>
+            <p class="pb-col-2-n counetr">17.0</p>
         </div>
     </div>
 
     <!-- Message from HOD -->
 
-    <div class="msg-hod reveal">
+    <div class="msg-hod ">
         <p class="msg-head">Message From HOD</p>
         <p class="msg-text"> " On the behalf of Department of Chemical Engineering, Madan Mohan Malaviya University of
             Technology, Gorakhpur, Uttar Pradesh, I welcome to visitor. Department was established in year 2016 and
@@ -233,14 +237,14 @@
             for industry. We always strive to provide them life learning skills and as results of this more than of 15%
             student joined higher degree program at premium institutes of India like IIMs, IITs, NITs, etc."
         </p>
-        <p class="msg-btn">Read More</p>
+        <a class="msg-btn" href="hod-message.html"  >Read More</a>
 
     </div>
 
     <!-- Message From Other Faculty -->
 
     <div class="msg-faculty">
-        <div class="msg-fac reveal">
+        <div class="msg-fac">
             <div class="msg-img">
                 <div class="msg-img-s1"></div>
                 <p class="msg-fac-name">Dr. Jyoti</p>
@@ -249,7 +253,7 @@
                 don't be afraid to explore uncharted territories. Curiosity is the fuel that drives innovation, and
                 collaboration is the key to unlocking its full potential.”</p>
         </div>
-        <div class="msg-fac reveal">
+        <div class="msg-fac ">
             <div class="msg-img">
                 <div class="msg-img-s2"></div>
                 <p class="msg-fac-name">Dr. Prateek Khare</p>
@@ -258,12 +262,12 @@
                 encouragement as you navigate the exciting and challenging world of chemical engineering. The path
                 you've chosen is paved with the potential to shape a better tomorrow.”</p>
         </div>
-        <div class="msg-fac reveal">
+        <div class="msg-fac">
             <div class="msg-img">
                 <div class="msg-img-s3"></div>
                 <p class="msg-fac-name">Dr. Ravi Shankar</p>
             </div>
-            <p class="msg-fac-text">“The equations may seem complex, the nights burning the midnight oil long, but
+            <p class="msg-fac-text" id="msg-fac-text-rv">“The equations may seem complex, the nights burning the midnight oil long, but
                 remember, within those reactions and processes lie solutions to some of humanity's greatest challenges.
                 From sustainable energy to life-saving medicines, your future work has the power to transform lives.”
             </p>
@@ -272,49 +276,49 @@
 
     <!-- Spotlights -->
 
-    <div class="center-heading reveal" id="spot-h">
+    <div class="center-heading" id="spot-h">
         <p>Spotlights</p>
     </div>
 
     <div class="Spotlights">
-        <div class="spot reveal">
+        <div class="spot">
             <div class="img-spot-1"></div>
             <p class="spot-name">Aspen Classes</p>
             <p class="spot-text">Most colleges have a dedicated page on their website outlining campus location and
                 accessibility. This section often includes details on the nearest railway station, a
                 distance from campus.</p>
-            <p class="spot-btn">Read More</p>
+            <a class="spot-btn" href="aspen.html" >Read More</a>
         </div>
-        <div class="spot reveal" >
+        <div class="spot" >
             <div class="img-spot-2"></div>
             <p class="spot-name">Industrial Visit</p>
-            <p class="spot-text">Most colleges have a dedicated page on their website outlining campus location and
-                accessibility. This section often includes details on the nearest railway station, a
-                distance from campus.</p>
-            <p class="spot-btn">Read More</p>
+            <p class="spot-text">On March 13 & March14, 2024 IIChE Student Chapter and Department of Chemical Engineering, MMMUT 
+                successfully organised an industrial visit at “Avadh Sugar And Energy Ltd. New India Sugar Mills Hata 
+                Kushinagar” </p>
+           <a class="spot-btn" href="industrial.html" >Read More</a>
         </div>
-        <div class="spot reveal">
+        <div class="spot">
             <div class="img-spot-3"></div>
-            <p class="spot-name">Extra-curricular</p>
-            <p class="spot-text">Most colleges have a dedicated page on their website outlining campus location and
-                accessibility. This section often includes details on the nearest railway station, a
-                distance from campus.</p>
-            <p class="spot-btn">Read More</p>
+            <p class="spot-name">Poster Presentation </p>
+            <p class="spot-text">The Department of Chemical Engineering and The IIChE Student Chapter organized a “Best 
+                Project Poster Presentation Competition” for final year students on May 11,2024 at 
+                Department of Chemical Engineering. </p>
+                <a class="spot-btn" href="pro-poster.html" >Read More</a>
         </div>
     </div>
 
     <!-- Top Requireters -->
 
-    <div class="center-heading reveal">
+    <div class="center-heading">
         <p>Top Requireters</p>
     </div>
 
-    <div class="Requireters-text reveal">
+    <div class="Requireters-text">
         <p>Every year, we are fortunate to welcome back some of the leading companies in the chemical engineering
             industry to our department for placements.</p>
     </div>
 
-    <div class="requireters reveal">
+    <div class="requireters">
         <div class="req-s-1"></div>
         <div class="req-s-2"></div>
         <div class="req-s-3"></div>
@@ -328,34 +332,40 @@
     <!-- Placement -->
 
     <div class="gate-coll">
-        <div class="gate-coll-text reveal">
-            <p class="gate-head"><strong>Fueling Futures:</strong> A Legacy of Excellence in Placement</p>
-            <p class="gate-text">The Chemical Engineering Department at MMMUT takes immense pride in our students'
-                consistent track record of excellence in the GATE exam. Year after year, our students have not only
-                secured impressive scores but also demonstrated their passion and potential for a thriving career in
-                this dynamic field.</p>
-            <p class="explore-gate">Explore</p>
+        <div class="gate-coll-text">
+            <p class="gate-head"><strong>Fuel Your Future:</strong>
+                 Launch Your Career with Chemical Engineering at MMMUT</p>
+            <p class="gate-text">Here at the Department of Chemical Engineering, MMMUT, we don't just teach you about chemical processes - we equip you to become the engineers who shape them. Our graduates are highly sought after, tackling challenges and making a real impact in industries around the world.</p>
+            <!-- <p class="explore-gate" onclick="alert('Available Soon...')" >Explore</p> -->
         </div>
-        <div class="gate-coll-photo reveal"></div>
-    </div>
-
-    <!-- Gate Score -->
-
-    <div class="gate-coll">
-        <div class="gate-coll-text reveal">
+        <!-- <div class="gate-coll-photo"></div> -->
+        <div class="gate-coll-text" id="gate-coll-text-top">
             <p class="gate-head"><strong>Fueling Futures:</strong> A Legacy of Excellence in GATE</p>
             <p class="gate-text">The Chemical Engineering Department at MMMUT takes immense pride in our students'
                 consistent track record of excellence in the GATE exam. Year after year, our students have not only
                 secured impressive scores but also demonstrated their passion and potential for a thriving career in
                 this dynamic field.</p>
-            <p class="explore-gate">Explore</p>
+            <!-- <p class="explore-gate" onclick="alert('Available Soon...')" >Explore</p> -->
         </div>
-        <div class="gate-coll-photo reveal"></div>
     </div>
+
+    <!-- Gate Score -->
+
+    <!-- <div class="gate-coll">
+        <div class="gate-coll-text">
+            <p class="gate-head"><strong>Fueling Futures:</strong> A Legacy of Excellence in GATE</p>
+            <p class="gate-text">The Chemical Engineering Department at MMMUT takes immense pride in our students'
+                consistent track record of excellence in the GATE exam. Year after year, our students have not only
+                secured impressive scores but also demonstrated their passion and potential for a thriving career in
+                this dynamic field.</p>
+            <p class="explore-gate" onclick="alert('Available Soon...')" >Explore</p>
+        </div>
+        <div class="gate-coll-photo"></div>
+    </div> -->
 
     <!-- Career -->
 
-    <div class="career reveal">
+    <div class="career">
         <p class="career-head">Launching Your <strong>Chemical Engineering Career</strong> at MMMUT</p>
         <p class="career-text">The Chemical Engineering Department at MMMUT has a proud tradition of launching
             successful careers. Year after year, our graduates secure placements in some of the most sought-after
@@ -367,12 +377,12 @@
             chemical engineering. Our industry-aligned curriculum, coupled with dedicated faculty and practical
             training, equips you to tackle real-world challenges with confidence.
         </p>
-        <p class="career-btn">Learn More</p>
+        <a class="career-btn" href="programmes.html" >Learn More</a>
     </div>
 
     <!-- Map -->
 
-    <div class="map reveal">
+    <div class="map">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d414.6182496649311!2d83.43332834773996!3d26.729587181024005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39915ca56d439c35%3A0xb6b2d3ee0862ba76!2sChemical%20Engineering%20Department!5e0!3m2!1sen!2sin!4v1712856974625!5m2!1sen!2sin"
             width="85%" height="90%" style="border:0;" allowfullscreen="" loading="lazy"
@@ -382,22 +392,25 @@
     <!-- Connectivity -->
 
     <div class="Connectivity">
-        <div class="con reveal">
+        <div class="con">
             <div class="img-con-1"></div>
             <p class="con-text">Far from away railway station
-                <strong>14 KM</strong>
+                <strong class="counetr">14.0</strong>
+                <strong>KM</strong>
             </p>
         </div>
-        <div class="con reveal">
+        <div class="con">
             <div class="img-con-2"></div>
-            <p class="con-text">Far from away railway station
-                <strong>14 KM</strong>
+            <p class="con-text">Far from away bus station
+                <strong class="counetr">7.0</strong>
+                <strong>KM</strong>
             </p>
         </div>
-        <div class="con reveal">
+        <div class="con">
             <div class="img-con-3"></div>
-            <p class="con-text">Far from away railway station
-                <strong>14 KM</strong>
+            <p class="con-text">Far from away Airport 
+                <strong class="counetr">5.3</strong>
+                <strong>KM</strong>
             </p>
         </div>
     </div>
@@ -419,38 +432,51 @@
                 <a class="foot-about-n" href="Faculty.html">Faculty</a>
                 <a class="foot-about-n" href="iiche.html">IIChE</a>
                 <a class="foot-about-n" href="labs.html">Labs</a>
-                <a class="foot-about-n" href="">Projects</a>
+                <a class="foot-about-n" href="project.html">Projects</a>
             </div>
             <div class="foot-nav-s">
                 <p class="foot-about">Official Links</p>
-                <a class="foot-about-n" href="index.html">MMMUT Official Website</a>
-                <a class="foot-about-n" href="Faculty.html">MMMUT Official ChED Website</a>
-                <a class="foot-about-n" href="iiche.html">Programmes</a>
-                <a class="foot-about-n" href="labs.html">Research Gate</a>
-                <a class="foot-about-n" href="">Name</a>
+                <a class="foot-about-n" href="http://www.mmmut.ac.in/" target="_blank" >MMMUT Official Website</a>
+                <a class="foot-about-n" href="http://www.mmmut.ac.in/ChemicalHome" target="_blank">MMMUT Official ChED Website</a>
+                <a class="foot-about-n" href="programmes.html">Programmes</a>
+                <a class="foot-about-n" onclick="alert('Available Soon...')" style="color: black;">Research Gate</a>
+                <!-- <a class="foot-about-n" href="">Name</a> -->
             </div>
             <div class="foot-nav-s">
                 <p class="foot-about">Others</p>
-                <a class="foot-about-n" href="index.html">Studenst</a>
-                <a class="foot-about-n" href="Faculty.html">Activities</a>
-                <a class="foot-about-n" href="iiche.html">Name</a>
-                <a class="foot-about-n" href="labs.html">Suggestions</a>
-                <a class="foot-about-n" href="">Contacts</a>
+                <a class="foot-about-n" href="project.html">Project</a>
+                <a class="foot-about-n" onclick="alert('Available Soon...')" >Suggestions</a>
+                <a class="foot-about-n" href="contact.html">Contacts</a>
+                <a class="foot-about-n" onclick="alert('Available Soon...') " style="color: black;" >Studenst</a>
+                <a class="foot-about-n" onclick="alert('Available Soon...')" style="color: black;">Activities</a>
             </div>
         </div>
         <div class="foot-social-h">
             <p>Follow us</p>
         </div>
         <div class="foot-social-c">
-            <a class="foot-social-i" onclick="alert('Available soon...')" href="">Instagram</a>
-            <a class="foot-social-i" onclick="alert('Available soon...')" href="">Facebook</a>
-            <a class="foot-social-i" onclick="alert('Available soon...')" href="">LinkedIn</a>
+            <!-- <a class="foot-social-i" onclick="alert('Available soon...')" >Instagram</a> -->
+            <!-- <a class="foot-social-i" onclick="alert('Available soon...')" >Facebook</a> -->
+            <a class="foot-social-i" href="https://www.linkedin.com/company/department-of-chemical-engineering-mmmut/" target="_blank">LinkedIn</a>
         </div>
         <div class="developer">
             <p>All Right Reserved</p>
             <p>Developed by Department of Chemical Engineering Students</p>
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="gsap.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".counetr").counterUp({
+                delay: 10,
+                time:1200
+            })
+        })
+    </script>
 
 
     <script type="text/javascript">
@@ -474,7 +500,11 @@
         }
     </script>
 
-    <script src="script.js"></script>
+
+
+
+
+    
 
 </body>
 

@@ -22,6 +22,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 </head>
 
 <body>
@@ -43,10 +46,10 @@
             <ol> <a id="nav-a" href="Faculty.html">Faculty</a></ol>
             <ol> <a id="nav-a" href="iiche.html">IIChE</a></ol>
             <ol><a id="nav-a" href="labs.html">Labs</a></a></ol>
-            <ol><a id="nav-a" href="#" onclick="alert('Available Soon')" >Activities</a></ol>
-            <ol> <a id="nav-a" href="certificates/certifucate.html" >Certificates</a></ol>
-            <ol id="z">Projects</ol>
-            <ol id="z">Contacts</ol>
+            <ol><a id="nav-a"  href="pro-poster.html">Activities</a></ol>
+            <ol> <a id="nav-a"  href="programmes.html">Programmes</a></ol>
+            <ol><a id="nav-a" href="project.html">Projects</a></a></ol>
+            <ol><a id="nav-a" href="contact.html">Contact</a></ol>
         </ul>
     </div>
     <!-- Hero Section -->
@@ -121,7 +124,7 @@
     <div class="iiche-coll">
         <div class="iiche-coll-text">
             <p class="about-iiche">About the <strong>IIChE Student Chapter MMMUT</strong></p>
-            <p class="about-text">Chemical engineering is a fascinating field that touches almost every aspect of our lives! It's all about the design, development, and improvement of processes that transform raw materials into valuable products. Think of everything from the gasoline in your car to the medicine in your cabinet, the clothes you wear, and even the food you eat – all have likely been touched by the hands of a chemical engineer. Chemical engineers translate processes developed in the lab into practical applications for the commercial production of products, and then work to maintain and improve those processes. They rely on the main foundations of engineering: math, physics, and chemistry. Biology also plays an increasingly important role.</p>
+            <p class="about-text" id="iiche-about-text-p">Chemical engineering is a fascinating field that touches almost every aspect of our lives! It's all about the design, development, and improvement of processes that transform raw materials into valuable products. Think of everything from the gasoline in your car to the medicine in your cabinet, the clothes you wear, and even the food you eat – all have likely been touched by the hands of a chemical engineer. Chemical engineers translate processes developed in the lab into practical applications for the commercial production of products, and then work to maintain and improve those processes. They rely on the main foundations of engineering: math, physics, and chemistry. Biology also plays an increasingly important role.</p>
             <!-- <p class="explore-about">Explore</p> -->
         </div>
     </div>
@@ -187,27 +190,32 @@
             <p class="pb-col-1-head"><strong>IIChE Student Chapter, MMMUT</strong> MMMUT
             </p>
             <p class="pb-col-1-text">The IIChE Student Chapter at MMMUT fosters a vibrant environment for budding engineers and innovators. The club likely organizes a multitude of activities that spark creativity and problem-solving skills.</p>
-            <p class="pb-col-1-btn">Learn More</p>
+            <!-- <p class="pb-col-1-btn">Learn More</p> -->
         </div>
         <div class="pb-col-2">
             <p class="pb-col-2-t">Tatal<br><strong class="impact">Expert Talk</strong></p>
-            <p class="pb-col-2-n">35+</p>
+            <p class="pb-col-2-n counetr">35.0 </p>
+            <small style="font-size: 40px;">+</small>
         </div>
         <div class="pb-col-3">
             <p class="pb-col-2-t">Total <br><strong class="impact"> Chemisch’Graphy</strong></p>
-            <p class="pb-col-2-n">6+</p>
+            <p class="pb-col-2-n counetr">6.0</p>
+             <small style="font-size: 40px;">+</small>
         </div>
         <div class="pb-col-4">
             <p class="pb-col-2-t">Total Number of<strong class="impact" id="impact-id2"> Other Events</strong></p>
-            <p class="pb-col-2-n">X+</p>
+            <p class="pb-col-2-n counetr">1.0</p>
+             <small style="font-size: 40px;">+</small>
         </div>
         <div class="pb-col-5">
             <p class="pb-col-2-t">Total Number of<br><strong class="impact" id="impact-id1"> Project Exhibition</strong></p>
-            <p class="pb-col-2-n">7+</p>
+            <p class="pb-col-2-n counetr">7.0</p>
+             <small style="font-size: 40px;">+</small>
         </div>
         <div class="pb-col-6">
             <p class="pb-col-2-t">Total Number of <br><strong class="impact"> Mind De Dazzle</strong></p>
-            <p class="pb-col-2-n">5+</p>
+            <p class="pb-col-2-n counetr">5.0</p>
+             <small style="font-size: 40px;">+</small>
         </div>
     </div>
 
@@ -219,10 +227,10 @@
     </div>
 
     <div class="iiche-pr">
-        <div class="reseach-pr-cont">
+        <div class="reseach-pr-cont" id="reseach-pr-cont-iiche">
             <p class="reseach-pr-about">Spotlights</p>
             <p class="reseach-pr-text" id="reseach-pr-text-iiche">These events are like spotlights, shining on students' talents and helping them turn their ideas into reality. The IIChE student chapter is all about making you the future leader in engineering - one awesome event at a time!</p>
-            <p class="reseach-pr-exp">Learn More</p>
+            <!-- <p class="reseach-pr-exp">Learn More</p> -->
         </div>
         <div class="reseach-pr-img-iiche">
             <div class="reseach-pr-s1-iiche"></div>
@@ -281,23 +289,23 @@
                 <a class="foot-about-n" href="Faculty.html">Faculty</a>
                 <a class="foot-about-n" href="iiche.html">IIChE</a>
                 <a class="foot-about-n" href="labs.html">Labs</a>
-                <a class="foot-about-n" href="">Projects</a>
+                <a class="foot-about-n" href="project.html">Projects</a>
             </div>
             <div class="foot-nav-s">
                 <p class="foot-about">Official Links</p>
-                <a class="foot-about-n" href="http://www.mmmut.ac.in/" target="_blank">MMMUT Official Website</a>
+                <a class="foot-about-n" href="http://www.mmmut.ac.in/" target="_blank" >MMMUT Official Website</a>
                 <a class="foot-about-n" href="http://www.mmmut.ac.in/ChemicalHome" target="_blank">MMMUT Official ChED Website</a>
-                <a class="foot-about-n" href="iiche.html">Programmes</a>
-                <a class="foot-about-n" href="labs.html">Research Gate</a>
-                <a class="foot-about-n" href="">Name</a>
+                <a class="foot-about-n" href="programmes.html">Programmes</a>
+                <a class="foot-about-n" onclick="alert('Available Soon...')" style="color: black;">Research Gate</a>
+                <!-- <a class="foot-about-n" href="">Name</a> -->
             </div>
             <div class="foot-nav-s">
                 <p class="foot-about">Others</p>
-                <a class="foot-about-n" href="index.html">Studenst</a>
-                <a class="foot-about-n" href="Faculty.html">Activities</a>
-                <a class="foot-about-n" href="iiche.html">Name</a>
-                <a class="foot-about-n" href="labs.html">Suggestions</a>
-                <a class="foot-about-n" href="">Contacts</a>
+                <a class="foot-about-n" href="project.html">Project</a>
+                <a class="foot-about-n" onclick="alert('Available Soon...')" >Suggestions</a>
+                <a class="foot-about-n" href="contact.html">Contacts</a>
+                <a class="foot-about-n" onclick="alert('Available Soon...') " style="color: black;" >Studenst</a>
+                <a class="foot-about-n" onclick="alert('Available Soon...')" style="color: black;">Activities</a>
             </div>
         </div>
         <div class="foot-social-h">
@@ -316,6 +324,14 @@
 
 
 
+    <script>
+        $(document).ready(function(){
+            $(".counetr").counterUp({
+                delay: 10,
+                time:1200
+            })
+        })
+    </script>
 
 </body>
 

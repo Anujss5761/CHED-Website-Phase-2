@@ -7,6 +7,7 @@
 body {
     display: grid;
     place-items: center;
+    /* background-color: #111; */
 }
 
 /* Custom Font Families */
@@ -108,6 +109,10 @@ body {
 .other-logo {
     height: 148px;
     width: 270px;
+    background-image: url(images/logos/NAAC-Logo-250x250-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .coll-name {
@@ -150,7 +155,7 @@ body {
     align-items: center;
     overflow: hidden;
     position: -webkit-sticky;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
 }
 
@@ -187,7 +192,7 @@ ol {
 .hero-section {
     max-width: 1180px;
     width: 100vw;
-    height: 755px;
+    height: 700px;
     /* height: 100vh; */
     display: flex;
     flex-direction: column;
@@ -237,7 +242,7 @@ ol {
 
 }
 
-.explore-btn {
+/* .explore-btn {
     width: 164px;
     height: 60px;
     background-color: black;
@@ -249,28 +254,29 @@ ol {
     border-radius: 10px;
     font-family: "Red Hat Display", sans-serif;
     margin-top: 4%;
-}
+} */
 
 /* About Section */
 
 .about-coll {
     width: 90vw;
-    height: 600px;
+    height: 500px;
     max-width: 1180px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .about-coll-photo {
     width: 40%;
     height: 400px;
     border-radius: 20px;
-    background-image: url(images/college/Untitledaa-1.png);
+    background-image: url(images/college/departmentimgae.jpg);
     background-position: center;
-    background-size: contain;
+    /* background-size: contain; */
+    background-size: cover;
     background-repeat: no-repeat;
     border: var(--border);
     cursor: pointer;
@@ -453,6 +459,7 @@ ol {
     font-weight: 500;
     margin-top: 10px;
     cursor: pointer;
+    color: black;
 }
 
 /* Research Project */
@@ -479,7 +486,7 @@ ol {
 
 .reseach-pr-s,.reseach-pr-s1-iiche,.reseach-pr-s2-iiche,.reseach-pr-s3-iiche,.reseach-pr-s4-iiche {
     width: 40%;
-    height: 150px;
+    height: 170px;
     border: var(--border);
     margin: 5% 5%;
     border-radius: 10px;
@@ -487,12 +494,28 @@ ol {
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
-
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 3% 2% 1% 2%;
 }
 
 .reseach-pr-s:hover {
     background-color: white;
     box-shadow: var(--box-shadow);
+}
+
+.reseach-pr-s-1{
+    background-image: url(images/logos/Science_and_Engineering_Research_Board.png);
+}
+.reseach-pr-s-2{
+    background-image: url(images/logos/teqip.png);
+}
+.reseach-pr-s-3{
+    background-image: url(images/logos/aic.jpeg);
+}
+.reseach-pr-s-4{
+    background-image: url(images/logos/cst.jpeg);
 }
 
 
@@ -542,6 +565,8 @@ ol {
     font-family: "Archivo Narrow", sans-serif;
     margin-top: 45px;
     cursor: pointer;
+    /* text-decoration: none; */
+    color: black;
 }
 
 /* Activities */
@@ -557,8 +582,8 @@ ol {
     font-size: 18px;
     padding: 2px 1% 2px 2.5%;
     border-radius: 15px;
-    font-family: "Crete Round", serif;
-    font-weight: 400;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 480;
     text-align: center;
     background-color: #FFCCF3;
     cursor: pointer;
@@ -591,7 +616,7 @@ ol {
     align-items: center;
     border-radius: 15px;
     border: var(--border);
-    background-color: #F092DD;
+    /* background-color: #F092DD; */
     cursor: pointer;
 }
 
@@ -602,8 +627,8 @@ ol {
 
 
 .img-act-1,.img-act-2,.img-act-3 {
-    width: 90%;
-    height: 70%;
+    width: 100%;
+    height: 85%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -611,24 +636,25 @@ ol {
 }
 
 .img-act-1 {
-    background-image: url(images/college/lab.png);
+    background-image: url(images/iiche/Debate_competition_poster.png);
 }
 .img-act-2 {
-    background-image: url(images/iiche/mind.jpg);
-    mix-blend-mode: darken;
+    background-image: url(images/iiche/mind-big.jpg);
+    /* mix-blend-mode: darken; */
 }
 .img-act-3 {
-    background-image: url(images/iiche/chemisch.png);
+    background-image: url(images/iiche/chemisch-big.png);
 }
 
 
 .act-name {
-    font-size: 24px;
+    font-size: 20px;
     font-family: "Archivo Black", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-weight: bold;
     /* border: var(--border); */
+    margin-top: 2%;
 
 }
 
@@ -647,12 +673,14 @@ ol {
 }
 
 .act-btn {
-    font-size: 18px;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: underline;
     font-family: "Archivo Narrow", sans-serif;
     margin-top: 10px;
     cursor: pointer;
+    margin-bottom: 2%;
+    color: black;
 }
 
 /* Publications */
@@ -732,11 +760,15 @@ ol {
 }
 
 #impact-id1 {
-    font-size: 18px;
+    font-size: 24px;
+    /* border: 2px solid black; */
+    margin-left: 2%;
 }
 
 #impact-id2 {
-    font-size: 16px;
+    font-size: 24px;
+    /* border: 2px solid black; */
+    margin-left: 2%;
 }
 
 .pb-col-1 {
@@ -791,6 +823,8 @@ ol {
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
+    padding-left: 4%;
+    padding-right: 3%;
 }
 
 .pb-col-5 {
@@ -798,6 +832,8 @@ ol {
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
+    padding-left: 4%;
+    padding-right: 3%;
 }
 
 .pb-col-6 {
@@ -813,7 +849,7 @@ ol {
 }
 
 .pb-col-2-n {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     padding-left: 3%;
 }
@@ -834,6 +870,20 @@ ol {
     position: relative;
     background-color: #FDE8E9;
     cursor: pointer;
+    /* background-image: url(images/college/pr1.jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 100%;
+    /* filter: grayscale(50%); */
+    /* filter: brightness(90%); */
+    /* color: white; */
+}
+
+.msg-hod {
+    max-width: 1180px;
+    width: 80vw;
+    height: 520px;
 }
 
 .msg-hod:hover {
@@ -861,6 +911,8 @@ ol {
     font-size: 20px;
     cursor: pointer;
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -979,7 +1031,7 @@ ol {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: left;
-    padding-left: 15px;
+    /* padding-left: 15px; */
     border-radius: 15px;
     border: var(--border);
     background-color: #FFCCF3;
@@ -994,24 +1046,24 @@ ol {
 .img-spot-1,
 .img-spot-2,
 .img-spot-3 {
-    width: 90%;
-    height: 150px;
+    width: 100%;
+    height: 180px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     /* border: var(--border); */
 }
 
 .img-spot-1 {
-    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+    background-image: url(images/college/aspen2.jpg);
 }
 
 .img-spot-2 {
-    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+    background-image: url(images/college/industrialvisit2.jpg);
 }
 
 .img-spot-3 {
-    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+    background-image: url(images/college/pp.jpg);
 }
 
 
@@ -1021,6 +1073,7 @@ ol {
     font-weight: 600;
     font-style: normal;
     display: var(--dl);
+    padding-left: 15px;
 
 }
 
@@ -1030,11 +1083,13 @@ ol {
     margin-top: -10px;
     width: 90%;
     text-align: justify;
+    padding-left: 15px;
 
 }
 
 #spot-text-2 {
     height: 100px;
+    padding-left: 15px;
 }
 
 .spot-btn {
@@ -1045,6 +1100,8 @@ ol {
     font-weight: 500;
     margin-top: 10px;
     cursor: pointer;
+    padding-left: 15px;
+    color: black;
 }
 
 /* Top Requireters */
@@ -1209,7 +1266,8 @@ ol {
     border-radius: 20px;
     background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
     background-position: center;
-    background-size: contain;
+    /* background-size: contain; */
+    background-size: cover;
     background-repeat: no-repeat;
     border: var(--border);
 }
@@ -1307,6 +1365,7 @@ ol {
     margin-top: 6%;
     font-family: "Roboto", sans-serif;
     cursor: pointer;
+    color: black;
 }
 
 
@@ -2106,7 +2165,7 @@ footer {
 
 .iiche-coll {
     width: 90vw;
-    height: 600px;
+    height: 450px;
     max-width: 1180px;
     display: flex;
     flex-direction: row;
@@ -2619,7 +2678,511 @@ footer {
     will-change: 200px;
     border: 2px solid black;
 }
+
+/* Project */
+
+.project{
+    width: 90vw;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 2px solid black; */
+    margin-top: 2%;
+}
+
+#project-a{
+    margin-top: -5%;
+}
+
+#project-g{
+    margin-top: 1.5%;
+    height: 360px;
+}
+
+.pro-p{
+    width: 90%;
+    height: 500px;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    border: var(--border);
+}
+
+.pro-p:hover {
+    box-shadow: var(--box-shadow);
+    background-color: #f1f1f1;
+}
+
+
+.pro-p-1{
+    height: 58px;
+    width:90%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: left;
+    padding-left: 10px;
+}
+
+.pro-p-s-btn{
+    height: 51px;
+    width: 205px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-left: 10px;
+    font-family: 'Sansation';
+}
+
+.pro-y-1{
+    font-size: 22px;
+}
+.pro-y-2{
+    font-size: 22px;
+}
+
+.pro-p-2{
+    height: 400px;
+    width:90%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
    
+
+.pro-p-c7{
+    height: 180px;
+    width: 46%;
+    background-color: #fff;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+}
+.pro-p-c7-p{
+    height: 180px;
+    width: 46%;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    padding-left: 2.5%;
+
+}
+.pro-p-c8{
+    height: 100px;
+    width: 46%;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    padding-left: 2.5%;
+}
+
+.pro-p-c6{
+    height: 73px;
+    width: 96%;
+    background-color: #fff;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+}
+
+.pro-p-t-title{
+    font-size: 18px;
+    padding-left: 2.5%;
+    font-family: 'Sansation';
+    color: #5B5A5A;
+}
+
+.pro-p-img1,.pro-p-img2,.pro-p-img3,.pro-p-img4,.pro-p-img5,.pro-p-img6,.pro-p-img7{
+    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 75%;
+}
+
+.pro-p-img1{
+    background-image: url(images/logos/Science_and_Engineering_Research_Board.png);
+    background-size: 10rem;
+}
+
+.pro-p-img2{
+    background-image: url(images/logos/teqip.png);
+}
+
+.pro-p-img3{
+    background-image: url(images/logos/cst.jpeg);
+    background-size: 8rem;
+}
+
+.pro-p-img4{
+    background-image: url(images/logos/teqip.png);
+}
+
+.pro-p-img5{
+    background-image: url(images/logos/teqip.png);
+}
+
+.pro-p-img6{
+    background-image: url(images/logos/aic.jpeg);
+    background-size: 8rem;
+}
+
+.pro-p-img7{
+    background-image: url(images/college/BASF_Schwarzheide_GmbH_Werksansicht_01.jpg);
+}
+
+.pro-p-t-grant,.pro-p-t-s{
+    font-size: 22px;
+    font-family: 'Sansation';
+}
+
+.pro-p-t-price{
+    font-size: 78px;
+    font-family: 'Sansation';
+    color: #5B5A5A;
+}
+
+.pro-p-t-price-l{
+    font-size: 38px;
+    font-family: 'Sansation';
+    color: #5B5A5A;
+}
+
+.pro-p-t-price-l-n{
+    font-size: 78px;
+    font-family: 'Sansation';
+    color: #5B5A5A;
+}
+
+.pro-p-t-fcn{
+    font-size: 42px;
+    font-family: 'Sansation';
+    color: #5B5A5A;
+}
+
+.pro-p-t-sn{
+    font-size: 30px;
+    font-family: 'Sansation';
+    color: #5B5A5A;
+}
+
+/* Progammes */
+
+.programmes{
+    height: 2050px;
+    width: 1180px;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: 2px solid black; */
+
+}
+
+.prog-title{
+    padding-top: 5%;
+    font-size: 100px;
+    width: 80%;
+    font-weight: 500;
+    /* border: 2px solid black; */
+}
+
+.prog-text{
+    padding-top: 4%;
+    font-size: 28px;
+    width: 98%;
+    /* border: 2px solid black; */
+    text-align: justify;
+}
+
+/* Faculty About Section */
+
+.ff-ab-m{
+    width: 1080px;
+    max-width: 1480px;
+    height: 500px;
+    margin-top: 2%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ff-ab-m1,.ff-ab-m2{
+    height: 98%;
+    width: 48%;
+    border: 2px solid black;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+}
+
+.ff-ab-m1{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-aro; */
+    align-items: flex-start;
+    padding-left: 5%;
+}
+
+.ff-ab-n{
+    font-size: 2.6rem;
+    font-weight: bold;
+    padding-top: 14;
+}
+
+.ff-ab-p{
+    font-size: 1.4rem;
+    /* font-weight: bold; */
+    padding-top: 1%;
+}
+
+.ff-ab-t{
+    font-size: 1rem;
+    padding-top: 4%;
+}
+
+.ff-ab-btn{
+    width: 142px;
+    height: 47px;
+    color: #ffff;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 7%;
+}
+
+.ff-ab-img{
+    height: 250px;
+    width: 250px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.ff-ab-img-2{
+    height: 280px;
+    width: 280px;
+    border: 3px solid black;
+    border-radius: 10%;
+}
+
+.ff-ab-mexp{
+    height: 130px;
+    width: 440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+
+.ff-ab-mexp1,.ff-ab-mexp2,.ff-ab-mexp3{
+    height: 98%;
+    width: 32%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.ff-ab-mexp1,.ff-ab-mexp2,.ff-ab-mexp3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ff-ex-i{
+    font-size: 3rem;
+}
+
+.ff-ex-t,.ff-ex-y{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Timeline */
+
+.timelinecont{
+    width: 1080px;
+    max-width: 1480px;
+    /* height: 500px; */
+    height: auto;
+    margin-top: 2%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.design {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timeline {
+    width: 80%;
+    height: 98%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+  }
+  
+  .timeline-content {
+    padding: 5px;
+    /* background: #1f1f1f; */
+    /* -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424; */
+            /* box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424; */
+    border-radius: 5px;
+    /* color: white; */
+    padding: 1.75rem;
+    transition: 0.4s ease;
+    overflow-wrap: break-word !important;
+    /* margin: 1rem; */
+    /* margin-bottom: 2px; */
+    border-radius: 6px;
+    border: 2px solid black;
+  }
+  
+  .timeline-component {
+    margin: 0px 20px 10px 20px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr 3px 1fr;
+    }
+    .timeline-middle {
+      position: relative;
+      background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+      width: 3px;
+      height: 100%;
+    }
+    .main-middle {
+      opacity: 0;
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+    }
+  }
+
+  /* Position */
+
+  .ff-ab-ul-position{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* height: 400px; */
+  }
+
+  .ff-ab-pos{
+    color: black;
+    font-size: 26px;
+    padding: 2% 0 2% 0;
+  }
+
+  
+  .ff-ab-ul-positiont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    /* height: 400px; */
+    overflow: hidden;
+  }
+
+  .ff-ab-post{
+    color: black;
+    font-size: 26px;
+    padding: 2% 1% 2% 3%;
+    border: 2px solid black;
+    font-style: normal;
+    text-align: start;
+  }
+
+  .hod-msg-p{
+    background-image: url(images/iiche/hod-image.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  
+
+  /* Aspen Photos */
+
+  #in-visit1,#in-visit2,#in-visit3,#in-visit4,#in-visit5,#in-visit6{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  #in-visit1{
+    background-image: url(images/college/industrialvisit2.jpg);
+  }
+  #in-visit2{
+    background-image: url();
+  }
+  #in-visit3{
+    background-image: url(images/college/pp.jpg);
+  }
+  #in-visit4{
+    background-image: url(images/college/pg.jpg);
+  }
+  #in-visit5{
+    background-image: url(images/college/posterc.jpg);
+  }
+  #in-visit6{
+    background-image: url(images/college/ps.jpg);
+  }
+
+ 
 
 @media screen and (max-width:600px) {
 
@@ -2635,7 +3198,7 @@ footer {
 
     .header {
         width: 100vw;
-        height: 100px;
+        height: 110px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -2655,7 +3218,7 @@ footer {
 
     .college-name {
         width: 100%;
-        height: 80px;
+        height: 100px;
     }
 
     .coll-name {
@@ -2686,7 +3249,7 @@ footer {
         background-color: black;
         display: flex;
         flex-direction: row;
-        /* justify-content: flex-start; */
+        justify-content: flex-start;
         align-items: center;
     }
 
@@ -2724,8 +3287,8 @@ footer {
 
     .dept-name {
         width: 100%;
-        height: 120px;
-        font-size: 52px;
+        height: 170px;
+        font-size: 62px;
         /* font-size: 500%; */
         line-height: 80%;
         font-family: "Lalezar", system-ui;
@@ -2741,8 +3304,8 @@ footer {
     .tag-line {
         width: 100%;
         height: 20px;
-        font-size: 8px;
-        margin-top: 4%;
+        font-size: 10px;
+        margin-top: 1%;
     }
 
     .dept-img {
@@ -2764,25 +3327,25 @@ footer {
     /* About Section */
 
     .about-coll {
-        width: 90vw;
-        height: 540px;
+        width: 98vw;
+        height: 250px;
         max-width: 1180px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        margin-top: 10%;
+        margin-top: 5%;
     }
 
     .about-coll-photo {
-        width: 90%;
-        height: 45%;
+        width: 0%;
+        height: 0%;
         border-radius: 20px;
     }
 
     .about-coll-text {
-        width: 90%;
-        height: 50%;
+        width: 96%;
+        height: 98%;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
@@ -2818,7 +3381,7 @@ footer {
     /* Vision and Mission */
 
     .vm {
-        width: 90vw;
+        width: 96vw;
         max-width: 1080px;
         height: 270px;
         padding-left: 4%;
@@ -2846,7 +3409,7 @@ footer {
     /* Facilities */
 
     .facilities {
-        width: 90vw;
+        width: 98vw;
         height: 1100px;
         border-radius: 20px;
         display: flex;
@@ -2857,7 +3420,7 @@ footer {
     }
 
     .fc {
-        width: 75%;
+        width: 85%;
         height: 35%;
         margin: 0 2px 0 2px;
         display: flex;
@@ -2882,17 +3445,17 @@ footer {
     }
 
     #fc-text-2 {
-        height: 50px;
+        height: 60px;
     }
 
 
     .fc-name {
-        font-size: 14px;
+        font-size: 18px;
         font-family: "Red Hat Display", sans-serif;
     }
 
     .fc-text {
-        font-size: 12px;
+        font-size: 16px;
         margin-top: -1px;
         width: 90%;
         text-align: justify;
@@ -2905,7 +3468,7 @@ footer {
     } */
 
     .fc-btn {
-        font-size: 12px;
+        font-size: 15px;
         font-family: Arial, Helvetica, sans-serif;
         text-decoration: underline;
         font-family: "Archivo Narrow", sans-serif;
@@ -2918,7 +3481,7 @@ footer {
 
     .reseach-pr {
         width: 90vw;
-        height: 550px;
+        height: 450px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -2953,6 +3516,10 @@ footer {
         padding-left: 4%;
         border: var(--border);
     }
+
+    /* .reseach-pr-cont {
+        height: 260px;
+    } */
 
     .reseach-pr-about {
         font-size: 20px;
@@ -3160,12 +3727,19 @@ footer {
         /* border: 2px solid black; */
     }
 
+    
+    #msg-fac-text-rv{
+        height: 170px;
+        padding-bottom: 2%;
+    }
+
     .msg-fac {
         width: 48%;
         height: 160px;
         margin-top: 1%;
         margin-right: 1%;
     }
+
 
     .msg-img {
         width: 80%;
@@ -3209,7 +3783,7 @@ footer {
     /* Spotlights */
 
     .Spotlights {
-        width: 90vw;
+        width: 98vw;
         height: 1100px;
         border-radius: 20px;
         display: flex;
@@ -3225,15 +3799,15 @@ footer {
 
     .spot {
         width: 85%;
-        height: 340px;
+        height: 360px;
         margin-top: 3%;
     }
 
     .img-spot-1,
     .img-spot-2,
     .img-spot-3 {
-        width: 80%;
-        height: 40%;
+        width: 100%;
+        height: 45%;
     }
 
     .spot-name {
@@ -3287,7 +3861,7 @@ footer {
     /* Gate Score */
 
     .gate-coll {
-        width: 90vw;
+        width: 98vw;
         height: 500px;
         max-width: 1180px;
         display: flex;
@@ -3298,14 +3872,14 @@ footer {
     }
 
     .gate-coll-photo {
-        width: 90%;
-        height: 38%;
+        width: 96%;
+        height: 44%;
         border-radius: 20px;
         margin-top: 4%;
     }
 
     .gate-coll-text {
-        width: 90%;
+        width: 96%;
         height: 60%;
         border-radius: 20px;
         display: flex;
@@ -3314,10 +3888,15 @@ footer {
         padding-left: 4%;
     }
 
+    #gate-coll-text-top{
+        margin-top: 3%;
+    }
+
     .gate-head {
         font-size: 20px;
         padding-top: 8%;
         display: inline;
+        padding-right: 2%;
     }
 
     .gate-text {
@@ -3334,7 +3913,7 @@ footer {
     /* Career */
 
     .career {
-        width: 88vw;
+        width: 95vw;
         height: 370px;
         display: flex;
         padding-top: 5%;
@@ -3361,11 +3940,11 @@ footer {
 
     .map {
         height: 40vh;
-        width: 92vw;
+        width: 96vw;
     }
 
     .Connectivity {
-        width: 90vw;
+        width: 98vw;
         height: 160px;
         display: flex;
         flex-direction: row;
@@ -3374,7 +3953,7 @@ footer {
     }
 
     .con {
-        width: 30%;
+        width: 32%;
         height: 80%;
         margin: 0 2px 0 2px;
         display: flex;
@@ -3406,7 +3985,7 @@ footer {
     /* Footer */
 
     footer {
-        max-width: 1280px;
+        max-width: 1420px;
         width: 100vw;
         height: 1120px;
         background-color: black;
@@ -3432,23 +4011,23 @@ footer {
     .add-text {
         font-size: 12px;
         padding-top: 3%;
+        padding-bottom: 3%;
     }
 
     .foot-nav {
-        height: 65vh;
         width: 80%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 332px;
+        height: 382px;
         width: 70%;
         margin-left: 4%;
         margin-top: 8%;
     }
 
     .foot-nav-s {
-        height: 150px;
+        height: 160px;
         width: 80%;
         margin-right: 13%;
         padding-top: 8%;
@@ -3460,6 +4039,7 @@ footer {
 
     .foot-about-n {
         font-size: 14px;
+        padding: 1% 0 1% 0;
     }
 
     .foot-social-h {
@@ -3490,7 +4070,7 @@ footer {
     .foot-social-i {
         padding-right: 5%;
         font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .developer {
@@ -3752,7 +4332,7 @@ footer {
 
     /* IIChE Page*/
 
-    .header {
+    .header-iiche {
         width: 100vw;
         height: 100px;
         display: flex;
@@ -3976,10 +4556,7 @@ footer {
         margin-top: 5%;
     }
 
-    .reseach-pr-cont {
-
-        height: 260px;
-    }
+    
 
     .gate-coll-photo-iiche-1,.gate-coll-photo-iiche-2,.gate-coll-photo-iiche-3   {
         width: 98%;
@@ -4035,6 +4612,109 @@ footer {
         font-weight: 500;
         
     }
+
+    /* Programmes */
+
+    .programmes{
+        height: 2300px;
+        width: 98vw;
+        max-width: 1280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        /* border: 2px solid black; */
     
+    }
+
+    .prog-title{
+        padding-top: 5%;
+        font-size: 45px;
+        width: 90%;
+        font-weight: 500;
+        /* border: 2px solid black; */
+    }
+    
+    .prog-text{
+        padding-top: 4%;
+        font-size: 18px;
+        width: 98%;
+        /* border: 2px solid black; */
+        text-align: justify;
+    }
+
+    #prog-title-ug{
+        width: 100%;
+    }
+
+    /* About Department */
+
+    #hod-msg-p{
+       height: 250px;
+    }
+
+    .project{
+        width: 98vw;
+        height: 500px;
+    
+    }
+
+    .pro-p{
+        width: 98%;
+        height: 500px;
+        /* border: 2px solid black; */
+
+    }
+
+    .pro-p-t-title{
+        font-size: 14px;
+    }
+    
+    .pro-p-t-grant,.pro-p-t-s{
+        font-size: 16px;
+        font-family: 'Sansation';
+    }
+    
+    .pro-p-t-price{
+        font-size: 42px;
+    }
+    
+    .pro-p-t-price-l{
+        font-size: 28px;
+    }
+    
+    .pro-p-t-price-l-n{
+        font-size: 48px;
+    }
+    
+    .pro-p-t-fcn{
+        font-size: 18px;
+    }
+    
+    .pro-p-t-sn{
+        font-size: 18px;
+    }
+
+    /* Project Images */
+
+    .pro-p-img4,.pro-p-img5,.pro-p-img2{
+        /* background-image: url(images/logos/teqip.png); */
+        background-size: 8rem;
+    }
+
+    .pro-p-img1{
+        /* background-image: url(images/logos/teqip.png); */
+        background-size: 7rem;
+    }
+
+    /* IIche About Text */
+
+    #iiche-about-text-p{
+        padding-right: 7%;
+    }
+
+    #reseach-pr-cont-iiche{
+        height: 200px;
+    }
 
 }

@@ -1,0 +1,10 @@
+-name, roll number
+-Describe your strengths
+-Describe your weaknesses
+-mention 5 things you would work to improve upon if youre inducted into the working committee of IIChe Student Chapter
+-From the selection given below, pick the skills you would be interested in working for:
+     .Social Media handling for various iiche social handles
+     .Web Development for department website
+     .Editorial Work for annual + monthly magazine
+     .Event Coordination + Management for various events of IIChe Student Chapter
+     
