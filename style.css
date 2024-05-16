@@ -1601,10 +1601,11 @@ footer {
 .laboratory {
     width: 86vw;
     max-width: 1080px;
-    height: 1600px;
+    /* height: 1600px; */
+    height: auto;
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     /* margin-top: 1.5%; */
 }
@@ -3988,6 +3989,7 @@ footer {
         max-width: 1420px;
         width: 100vw;
         height: 1120px;
+        /* height: auto; */
         background-color: black;
         opacity: 88%;
         padding-top: 3%;
@@ -4310,7 +4312,12 @@ footer {
 
     .laboratory {
         width: 98vw;
-    }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        }
 
     .center-heading-lb {
         font-size: 35px;
@@ -4318,7 +4325,7 @@ footer {
     }
 
     .lb-act {
-        width: 48%;
+        width: 94%;
         height: 324px;
     }
 
